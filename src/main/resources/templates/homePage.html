@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout:: template (~{:: #home-page-section})}">
+
+
+<section id="home-page-section">
+    <div class="container">
+        <div>
+            <img th:src="@{/img/taxi3.jpg}" alt="Taxi" style="width: 100%; height: 300px; object-fit: cover">
+        </div>
+
+        <div style="text-align: center">
+            <h2 style="font-size: 2em">Travel Allowance</h2>
+            <p style="font-weight: 200">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus atque deserunt dolor dolore dolores ea eaque eius est excepturi exercitationem illo ipsa ipsum, nam neque nobis odio perferendis quo similique, tempore? Assumenda delectus eligendi et laudantium, modi molestiae quo ullam voluptas. Culpa molestiae nemo officiis placeat voluptates. Aut, mollitia.</p>
+        </div>
+
+        <div style="display: flex; flex-direction: row; justify-content: center">
+
+        </div>
+    </div>
+</section>
+</html>
