@@ -16,38 +16,39 @@ public class MonthService {
     private final MonthDao monthDao;
     private boolean dataInitialized = false; // W ten sposób dane zostaną zainicjowane tylko raz.
 
-    @Autowired
     public MonthService(MonthDao monthDao) {
-
-        this.monthDao = monthDao; //inicjalizacja
+        this.monthDao = monthDao;
     }
 
-    @PostConstruct
-    public void init() {
-        if (!dataInitialized) {
-            monthDao.save(new Month(MonthName.JANUARY, 21));
-            monthDao.save(new Month(MonthName.FEBRUARY, 20));
-            monthDao.save(new Month(MonthName.MARCH, 23));
-            monthDao.save(new Month(MonthName.MAY, 20));
-            monthDao.save(new Month(MonthName.JUNE, 22));
-            monthDao.save(new Month(MonthName.JULY, 22));
-            monthDao.save(new Month(MonthName.JULY, 21));
-            monthDao.save(new Month(MonthName.AUGUST, 23));
-            monthDao.save(new Month(MonthName.SEPTEMBER, 20));
-            monthDao.save(new Month(MonthName.OCTOBER, 21));
-            monthDao.save(new Month(MonthName.NOVEMBER, 22));
-            monthDao.save(new Month(MonthName.DECEMBER, 23));
 
-            dataInitialized = true;
-        }
+   @PostConstruct
+   public void init() {
+       if (!dataInitialized) {
+           monthDao.save(new Month(1L, MonthName.JANUARY, 21));
+           monthDao.save(new Month(2L, MonthName.FEBRUARY, 20));
+           monthDao.save(new Month(3L, MonthName.MARCH, 23));
+           monthDao.save(new Month(4L, MonthName.APRIL, 20));
+           monthDao.save(new Month(5L, MonthName.MAY, 22));
+           monthDao.save(new Month(6L, MonthName.JUNE, 22));
+           monthDao.save(new Month(7L, MonthName.JULY, 21));
+           monthDao.save(new Month(8L, MonthName.AUGUST, 23));
+           monthDao.save(new Month(9L, MonthName.SEPTEMBER, 20));
+           monthDao.save(new Month(10L, MonthName.OCTOBER, 21));
+           monthDao.save(new Month(11L, MonthName.NOVEMBER, 22));
+           monthDao.save(new Month(12L, MonthName.DECEMBER, 23));
+
+       dataInitialized = true;
     }
+  }
 
-    public void editWorkingDays(String monthName, MonthEditModel monthEditModel) {
 
-        Optional<Month> byMonthName = monthDao.findByMonthName(monthName);
+    public void editWorkingDays(MonthName monthName, MonthEditModel monthEditModel) {
+
+       Optional<Month> byMonthName = monthDao.findByMonthName(monthName);
 
         if (byMonthName.isPresent()) {
-            byMonthName.get().setWorkingDays(monthEditModel.getWorkingDays());
+           byMonthName.get().setWorkingDays(monthEditModel.getWorkingDays());
+           monthDao.save(byMonthName.get());
         }
 
 
