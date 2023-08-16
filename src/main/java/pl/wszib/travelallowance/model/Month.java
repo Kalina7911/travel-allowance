@@ -5,7 +5,7 @@ import pl.wszib.travelallowance.model.MonthName;
 import java.util.Set;
 
 @Entity
-@Table(name = "month")
+@Table(name = "months")
 public class Month {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -37,12 +37,12 @@ public class Month {
         this.workingDays = workingDays;
     }
 
-    public MonthName getMonthName() {
-        return monthName;
-    }
+   public MonthName getMonthName() {
+       return monthName;
+   }
 
-    public void setMonthName(MonthName monthName) {
-        this.monthName = monthName;
-    }
+  public void setMonthName(MonthName monthName) {
+      this.monthName = monthName;
+  }
 }
 
