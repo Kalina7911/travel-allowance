@@ -4,11 +4,19 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import pl.wszib.travelallowance.model.EmployeePreferences;
 import pl.wszib.travelallowance.model.Month;
+import pl.wszib.travelallowance.model.User;
+
+import java.util.List;
 
 @Repository
     public interface EmployeePreferencesDao extends JpaRepository<EmployeePreferences,Long> {
 
-    EmployeePreferences findByEmployeeIdAndMonth(String employeeId, Month month);
+    List<EmployeePreferences> findByUserAndMonth(User user, Month month);
+
+
+
+
+    // EmployeePreferences findByEmployeeIdAndMonth(String employeeId, Month month);
 
     // Pobieranie preferencji pracownika na podstawie daty
         //EmployeePreferences findByDate(LocalDate date);

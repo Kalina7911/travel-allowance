@@ -14,7 +14,7 @@ public class EmployeePreferences {
     @Column(name = "employee_pref_id")
     private Long id;
     @ManyToOne
-    @JoinColumn(name = "month_id")
+   @JoinColumn(name = "month_id")
     private Month month;
     @Column(name = "local_date")
     private LocalDate localDate;
@@ -25,7 +25,23 @@ public class EmployeePreferences {
     @JoinColumn(name = "user_id")
     private User user;
 
+    public void setId(Long id) {
+        this.id = id;
+    }
 
+    public void setMonth(Month month) {
+        this.month = month;
+    }
 
+    public void setLocalDate(LocalDate localDate) {
+        this.localDate = localDate;
+    }
 
+    public void setShift(Shift shift) {
+        this.shift = shift;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 }
