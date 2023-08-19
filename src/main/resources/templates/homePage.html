@@ -9,15 +9,7 @@
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
-<nav id="page-nav">
-<div class="container" id="nav-row">
-
-    <a th:href="@{/}"  id="logo">Travel Allowance</a>
-    <a class="nav-item" href="">Preferences</a>
-    <a class="nav-item" href="">Bonus</a>
-
-</div>
-</nav>
+<nav th:replace="~{fragments/navigation:: nav}"></nav>
 
 <section id="home-page-section">
 
