@@ -1,52 +1,53 @@
 :root {
-    /*deklaracja podstawowych kolorów aplikacji
-    aby utworzyć zmienną dajemy "--" */
+
     --primary: #222222;
     --secondary: #1E87F0;
-    --warning: #F0506E;
+    --waring: #F0506E;
     --white: #FFFFFF;
+
 }
 
-/*deklaracja głównej czcionki strony*/
 html {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
 }
 
-/*usunięcie marginesu dla body*/
 html, body {
     margin: 0;
 }
 
-/*    usunięcie podkreślenia i domyślnego koloru linków
-      text-decoration będzie dziedziczone po rodzicach*/
+
 a {
     text-decoration: inherit;
     color: inherit;
 }
 
-/*środkowanie zawartości strony*/
 .container {
     margin: 0 auto;
 }
 
-/*responsywność strony: */
+/*-------responsywnosc */
+
+
 @media only screen and (max-width: 992px) {
     .container {
         width: 90%;
     }
+
 }
 
 @media only screen and (min-width: 992px) {
     .container {
         width: 80%;
     }
+
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 120px) {
     .container {
         width: 50%;
     }
+
 }
 
 #page-nav {
@@ -55,7 +56,7 @@ a {
 
 #nav-row {
     display: flex;
-    text-direction: row;
+    flex-direction: row;
     justify-content: space-between;
 }
 
@@ -68,74 +69,7 @@ a {
     padding: 10px 0;
 }
 
-.img-menu {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
+#home-page-section.container div {
 
-.text{
-    text-align: center;
-}
-
-.paragraph{
-    font-weight: 200;
-}
-
-.heading{
-    font-size: 2em;
-}
-
-.btn{
-    /*aby odnieść się do zadeklarowanej wcześniej w style.css zmiennej "--secondary" -> var(nazwa zmiennej)*/
-    background-color: var(--secondary);
-    padding: 15px;
-    text-transform: uppercase;
-    color: var(--white);
-    font-weight: 200;
-    border: none;
-    cursor: pointer;
-    font-size: 1em;
-}
-
-.btn-sm{
-    padding: 5px 15px;
-    font-size: 0.8em;
-}
-
-.btn-main{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-#home-page-section .container div {
     margin: 50px 0;
 }
-
-.input{
-    border: 1px solid var(--primary);
-    padding: 15px;
-    width: 100%;
-}
-
-#order-content form div {
-    display: flex;
-    flex-direction: row;
-    margin: 10px 0;
-}
-
-#opinion-section form div {
-    display: flex;
-    flex-direction: row;
-    margin: 10px;
-}
-
-#opinion-section p {
-    font-weight: 200;
-}
-
-
-
-
-

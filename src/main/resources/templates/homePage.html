@@ -1,27 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Travel Allowance</title>
+    <link rel="stylesheet" th:href="@{/css/fonts.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
+<nav id="page-nav">
+<div class="container" id="nav-row">
 
-</body>
-</html>
+    <a th:href="@{/}"  id="logo">Travel Allowance</a>
+    <a class="nav-item" href="">Preferences</a>
+    <a class="nav-item" href="">Bonus</a>
 
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout:: template (~{:: #home-page-section})}">
-
+</div>
+</nav>
 
 <section id="home-page-section">
+
+    <tr th:each="preference: ${preferences}">
+        <td th:text="${preference.index}" />
+        <td th:text="${preference.shift}" />
+    </tr>
     <div class="container">
         <div>
-            <img th:src="@{/img/taxi3.jpg}" alt="Taxi" style="width: 100%; height: 300px; object-fit: cover">
+            <img th:src="@{/img/Taxi.jpg}" alt="Taxi" style="width: 100%; height: 300px; object-fit: cover">
         </div>
 
-        <div style="text-align: center">
+
+    <div style="text-align: center">
             <h2 style="font-size: 2em">Travel Allowance</h2>
-            <p style="font-weight: 200">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus atque deserunt dolor dolore dolores ea eaque eius est excepturi exercitationem illo ipsa ipsum, nam neque nobis odio perferendis quo similique, tempore? Assumenda delectus eligendi et laudantium, modi molestiae quo ullam voluptas. Culpa molestiae nemo officiis placeat voluptates. Aut, mollitia.</p>
+            <p style="font-weight:200">tak tak tak, consectetur adipisicing elit. A accusamus atque deserunt dolor dolore dolores ea eaque eius est excepturi exercitationem illo ipsa ipsum, nam neque nobis odio perferendis quo similique, tempore? Assumenda delectus eligendi et laudantium, modi molestiae quo ullam voluptas. Culpa molestiae nemo officiis placeat voluptates. Aut, mollitia.</p>
+            <p style="font-weight: 200">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium earum enim fugit harum id ipsa ipsum itaque labore libero maiores, modi nam nihil odio ratione rem saepe ut vero voluptatem? Aliquid delectus esse nemo officia ratione suscipit? Ab asperiores commodi distinctio et, fugiat ipsam neque, obcaecati qui quisquam sint soluta.</p>
         </div>
 
         <div style="display: flex; flex-direction: row; justify-content: center">
@@ -29,4 +42,5 @@
         </div>
     </div>
 </section>
+</body>
 </html>
