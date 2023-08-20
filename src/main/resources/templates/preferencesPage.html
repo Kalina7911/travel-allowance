@@ -1,10 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 
-</body>
+<html lang="en" xmlns:th="https://www.thymeleaf.org"   th:replace="~{fragments/layout :: template (~{:: #preferences-content})}">
+
+<section id="preferences-content">
+
+    <div class="container">
+        <div>
+            <img th:src="@{/img/preferences.jpg}" alt="Preferences" style="width: 100%; height: 200px; object-fit: cover">
+        </div>
+
+
+        <div style="text-align: center">
+            <h2 style="font-size: 2em">Preferences</h2>
+            <p style="font-weight:200">tak tak tak, consectetur adipisicing elit. A accusamus atque deserunt dolor dolore dolores ea eaque eius est excepturi exercitationem illo ipsa ipsum, nam neque nobis odio perferendis quo similique, tempore? Assumenda delectus eligendi et laudantium, modi molestiae quo ullam voluptas. Culpa molestiae nemo officiis placeat voluptates. Aut, mollitia.</p>
+            <p style="font-weight: 200">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium earum enim fugit harum id ipsa ipsum itaque labore libero maiores, modi nam nihil odio ratione rem saepe ut vero voluptatem? Aliquid delectus esse nemo officia ratione suscipit? Ab asperiores commodi distinctio et, fugiat ipsam neque, obcaecati qui quisquam sint soluta.</p>
+        </div>
+
+
+        <div style="display: flex; flex-direction: row; justify-content: center">
+
+        </div>
+    </div>
+
+
+
+</section>
+
 </html>

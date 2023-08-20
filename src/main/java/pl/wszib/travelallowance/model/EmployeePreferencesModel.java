@@ -35,5 +35,12 @@ public class EmployeePreferencesModel {
         return Shift.valueOf(shift);
     }
 
+    public void setShift(Shift shift) {
+        this.shift = shift;
+    }
 
+    public void setMonth(String month) {
+
+        this.month = month;
+    }
 }

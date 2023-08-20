@@ -1,1 +1,0 @@
-insert into month (month_id, working_days, month_name) values (1,20, 'JANUARY')

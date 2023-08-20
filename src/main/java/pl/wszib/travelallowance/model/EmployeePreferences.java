@@ -29,6 +29,26 @@ public class EmployeePreferences {
         this.id = id;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public Month getMonth() {
+        return month;
+    }
+
+    public LocalDate getLocalDate() {
+        return localDate;
+    }
+
+    public Shift getShift() {
+        return shift;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
     public void setMonth(Month month) {
         this.month = month;
     }
