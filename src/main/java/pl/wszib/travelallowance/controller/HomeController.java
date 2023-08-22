@@ -22,10 +22,10 @@ public class HomeController {
         return "homePage";
     }
 
-    @PostMapping("/preferences")
+   /* @PostMapping("/preferences")
     public void savePreferences (@ModelAttribute("employeePreferencesModel") EmployeePreferencesModel employeePreferencesModel){
         employeePreferencesService.savePreferences(employeePreferencesModel);
-    }
+    }*/
 
 
 }

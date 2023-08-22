@@ -74,6 +74,18 @@ a {
     margin: 50px 0;
 }
 
-#preferences-content.container div {
-    margin: 50px 0;
+.form-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.scaled-form {
+    display: inline-block;
+    transform: scale(3);
+    transform-origin: center;
+}
+
+
+.normal {
+    font-weight: 300    ;
 }

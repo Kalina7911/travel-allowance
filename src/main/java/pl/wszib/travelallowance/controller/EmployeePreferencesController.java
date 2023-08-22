@@ -20,16 +20,31 @@ public class EmployeePreferencesController {
         this.employeePreferencesService = employeePreferencesService;
     }
 
-   /* @PostMapping("/preferences")
+  /* @PostMapping("/preferences")
     public void savePreferences (@ModelAttribute ("employeePreferencesModel") EmployeePreferencesModel employeePreferencesModel){
         employeePreferencesService.savePreferences(employeePreferencesModel);
     }*/
 
-   /*@GetMapping("/preferences/{month}")
-    public String findAllPreferences (@PathVariable ("month") String month, Model model){
-        model.addAttribute("month", month);
-        model.addAttribute("preferences", employeePreferencesService.findAllPreferences(month));
+  /* @GetMapping("/preferences")   ///{month}, (@PathVariable ("month") String month,
+    public String findAllPreferences (Model model){
+       // model.addAttribute("month", month);
+        //model.addAttribute("preferences", employeePreferencesService.findAllPreferences(month));
         return "preferencesPage";
+
+    }*/
+
+   /* @GetMapping("/")
+    public String homePage(Model model) {
+        model.addAttribute("employeePreferencesModel", new EmployeePreferencesModel());
+        model.addAttribute("firstName", "Adam");//co tu sie pisze
+        return "homePage";
+    }*/
+
+/*   @PostMapping("/preferences")
+    public void savePreferences (@ModelAttribute EmployeePreferencesModel employeePreferencesModel, Model model){
+        employeePreferencesService.savePreferences(employeePreferencesModel);
+
+      model.addAttribute("preferences",employeePreferencesModel );
 
     }*/
 
@@ -38,4 +53,21 @@ public class EmployeePreferencesController {
    //public void editShift(@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate localDate, Shift shift){
      //  employeePreferencesService.editShift();
   // }
-}
+
+
+
+
+        @GetMapping("/preferences")
+        public String preferencesPage(Model model) {
+            // Tutaj można dodać logikę lub pobieranie danych, jeśli jest to potrzebne
+            model.addAttribute("employeePreferencesModel", new EmployeePreferencesModel()); // Dodanie pustego obiektu do modelu
+            return "preferencesPage";
+        }
+
+        @PostMapping("/preferences")
+        public String savePreferences(@ModelAttribute EmployeePreferencesModel employeePreferencesModel) {
+            employeePreferencesService.savePreferences(employeePreferencesModel); // Wywołanie metody serwisu do zapisu preferencji
+            return "redirect:/preferences"; // Przekierowanie z powrotem na stronę z formularzem
+        }
+    }
+

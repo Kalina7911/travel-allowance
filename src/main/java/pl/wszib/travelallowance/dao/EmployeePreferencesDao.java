@@ -23,16 +23,6 @@ import java.util.Optional;
     Optional<EmployeePreferences> findByIndexAndLocalDate(LocalDate localDate);
 
 
-    // EmployeePreferences findByEmployeeIdAndMonth(String employeeId, Month month);
-
-    // Pobieranie preferencji pracownika na podstawie daty
-        //EmployeePreferences findByDate(LocalDate date);
-
-        // Pobieranie wszystkich preferencji pracownika dla danego miesiąca i roku
-        //List<EmployeePreferences> findByDateBetween(LocalDate startDate, LocalDate endDate);
-
-        // Pobieranie wszystkich preferencji pracownika o zadanym numerze identyfikacyjnym
-      //List<EmployeePreferences> findByEmployeeId(String employeeId);
 
 }
 

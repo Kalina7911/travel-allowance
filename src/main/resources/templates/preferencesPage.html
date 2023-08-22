@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en" xmlns:th="https://www.thymeleaf.org"   th:replace="~{fragments/layout :: template (~{:: #preferences-content})}">
 
 <section id="preferences-content">
@@ -13,16 +12,25 @@
         <div style="text-align: center">
             <h2 style="font-size: 2em">Preferences</h2>
             <p style="font-weight:200">tak tak tak, consectetur adipisicing elit. A accusamus atque deserunt dolor dolore dolores ea eaque eius est excepturi exercitationem illo ipsa ipsum, nam neque nobis odio perferendis quo similique, tempore? Assumenda delectus eligendi et laudantium, modi molestiae quo ullam voluptas. Culpa molestiae nemo officiis placeat voluptates. Aut, mollitia.</p>
-            <p style="font-weight: 200">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium earum enim fugit harum id ipsa ipsum itaque labore libero maiores, modi nam nihil odio ratione rem saepe ut vero voluptatem? Aliquid delectus esse nemo officia ratione suscipit? Ab asperiores commodi distinctio et, fugiat ipsam neque, obcaecati qui quisquam sint soluta.</p>
         </div>
 
 
-        <div style="display: flex; flex-direction: row; justify-content: center">
+        <div style=" margin-top: 70px; display: flex; flex-direction: column; align-items: center;">
 
-        </div>
+    <form action="#" th:action="@{/preferences}" th:object="${employeePreferencesModel}" method="post" style="text-align: center; transform: scale(2); transform-origin: center;" >
+        <label for="localDate">Date:</label>
+        <input type="date" id="localDate" name="localDate" th:field="*{localDate}" /><br/>
+        <select name="shift" th:field="*{shift}">
+            <option th:each="shiftOpt : ${T(pl.wszib.travelallowance.model.Shift).values()}"
+                    th:value="${shiftOpt}" th:text="${shiftOpt}"></option>
+        </select>
+        <input type="number" id="index" name="index" th:field="*{index}" /><br/>
+
+        <button type="submit">Save</button>
+
+    </form>
     </div>
-
-
+    </div>
 
 </section>
 
