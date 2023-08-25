@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org"   th:replace="~{fragments/layout :: template (~{:: #bonus-page-section})}">
+<html lang="en" xmlns:th="https://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: template (~{:: #bonus-page-section})}">
 
 
 <section id="bonus-page-section">
@@ -10,17 +11,41 @@
         </div>
 
 
-        <div style="text-align: center">
-            <h2 style="font-size: 2em">Travel Allowance</h2>
-            <p style="font-weight:200">tak tak tak, consectetur adipisicing elit. A accusamus atque deserunt dolor dolore dolores ea eaque eius est excepturi exercitationem illo ipsa ipsum, nam neque nobis odio perferendis quo similique, tempore? Assumenda delectus eligendi et laudantium, modi molestiae quo ullam voluptas. Culpa molestiae nemo officiis placeat voluptates. Aut, mollitia.</p>
-            <p style="font-weight: 200">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium earum enim fugit harum id ipsa ipsum itaque labore libero maiores, modi nam nihil odio ratione rem saepe ut vero voluptatem? Aliquid delectus esse nemo officia ratione suscipit? Ab asperiores commodi distinctio et, fugiat ipsam neque, obcaecati qui quisquam sint soluta.</p>
-        </div>
+            <h2 style="text-align: center; font-size:2em">Rate of Allowance</h2>
+        <div style=" margin-top: 90px; display: flex; flex-direction: column; align-items: center;transform: scale(1.5)">
+        <form th:action="@{/calculate-bonus}" method="get">
+            <label for="index">Enter Your Index:</label>
+            <input type="number" id="index" name="index" required>
+            <div style="margin-top: 10px">
+            <label for="month">Select Month:</label>
+            <select id="month" name="month">
+                <option value="JANUARY">January</option>
+                <option value="FEBRUARY">February</option>
+                <option value="MARCH">March</option>
+                <option value="APRIL">April</option>
+                <option value="MAY">May</option>
+                <option value="JUNE">June</option>
+                <option value="JULY">July</option>
+                <option value="AUGUST">August</option>
+                <option value="SEPTEMBER">September</option>
+                <option value="OCTOBER">October</option>
+                <option value="NOVEMBER">November</option>
+                <option value="DECEMBER">December</option>
+            </select>
+            </div>
+            <div style="margin-top: 10px">
+            <button type="submit">Calculate</button>
+                </div>
+        </form>
 
-        <div style="display: flex; flex-direction: row; justify-content: center">
+            <div style="margin-top: 30px">
 
-        </div>
+        <p>Your Travel Allowance: <span th:text="${travelAllowance}"></span></p>
+        <p>Number of PM Shifts: <span th:text="${numberOfPMShifts}"></span></p>
+</div>
+
     </div>
-
+    </div>
 
 </section>
 

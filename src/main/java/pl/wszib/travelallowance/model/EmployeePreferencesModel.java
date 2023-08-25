@@ -6,7 +6,7 @@ public class EmployeePreferencesModel {
     private Integer index;
     private String month;
     private LocalDate localDate;
-    private String shift;
+    private Shift shift;
 
 
     public Integer getIndex() {
@@ -32,8 +32,11 @@ public class EmployeePreferencesModel {
     }
 
     public Shift getShift() {
-        return Shift.valueOf(shift);
+
+       return shift;
+
     }
+
 
     public void setShift(Shift shift) {
         this.shift = shift;

@@ -1,22 +1,26 @@
 package pl.wszib.travelallowance.services;
 
 import jakarta.annotation.PostConstruct;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.wszib.travelallowance.dao.MonthDao;
+import pl.wszib.travelallowance.dao.UserDao;
 import pl.wszib.travelallowance.model.Month;
 import pl.wszib.travelallowance.model.MonthEditModel;
 import pl.wszib.travelallowance.model.MonthName;
+import pl.wszib.travelallowance.model.User;
 
 import java.util.Optional;
 
 @Service
 public class MonthService {
 
+
+    private final UserDao userDao;
     private final MonthDao monthDao;
     private boolean dataInitialized = false; // W ten sposób dane zostaną zainicjowane tylko raz.
 
-    public MonthService(MonthDao monthDao) {
+    public MonthService(UserDao userDao, MonthDao monthDao) {
+        this.userDao = userDao;
         this.monthDao = monthDao;
     }
 
@@ -31,11 +35,12 @@ public class MonthService {
            monthDao.save(new Month(5L, MonthName.MAY, 22));
            monthDao.save(new Month(6L, MonthName.JUNE, 22));
            monthDao.save(new Month(7L, MonthName.JULY, 21));
-           monthDao.save(new Month(8L, MonthName.AUGUST, 23));
+           monthDao.save(new Month(8L, MonthName.AUGUST, 3));
            monthDao.save(new Month(9L, MonthName.SEPTEMBER, 20));
            monthDao.save(new Month(10L, MonthName.OCTOBER, 21));
            monthDao.save(new Month(11L, MonthName.NOVEMBER, 22));
            monthDao.save(new Month(12L, MonthName.DECEMBER, 23));
+           userDao.save(new User("admin",111,"admin"));
 
        dataInitialized = true;
     }
@@ -53,6 +58,8 @@ public class MonthService {
 
 
     }
+
+
 }
 
 

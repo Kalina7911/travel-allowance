@@ -3,6 +3,10 @@ package pl.wszib.travelallowance.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import pl.wszib.travelallowance.model.EmployeePreferencesModel;
+import pl.wszib.travelallowance.services.EmployeePreferencesService;
 
 @Controller
 public class HomeController {
@@ -21,11 +25,6 @@ public class HomeController {
         model.addAttribute("firstName", "Adam");//co tu sie pisze
         return "homePage";
     }
-
-   /* @PostMapping("/preferences")
-    public void savePreferences (@ModelAttribute("employeePreferencesModel") EmployeePreferencesModel employeePreferencesModel){
-        employeePreferencesService.savePreferences(employeePreferencesModel);
-    }*/
 
 
 }

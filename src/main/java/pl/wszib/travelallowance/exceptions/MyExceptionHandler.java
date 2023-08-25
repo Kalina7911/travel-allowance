@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @ControllerAdvice
 public class MyExceptionHandler {
@@ -15,6 +16,16 @@ public class MyExceptionHandler {
     public ResponseEntity<String> handleResourceAlreadyExists(RuntimeException ex) {
 
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
+
+
+    }
+
+    @ExceptionHandler(value = {WorkingDaysException.class})
+    public String handlerWorkingDays(WorkingDaysException ex, RedirectAttributes redirectAttributes) {
+        redirectAttributes.addFlashAttribute("errorMessage", ex.getMessage());
+
+        return "redirect:/preferences";
+
 
 
     }
