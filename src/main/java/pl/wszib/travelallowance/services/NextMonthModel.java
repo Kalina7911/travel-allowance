@@ -2,8 +2,8 @@ package pl.wszib.travelallowance.services;
 
 public class NextMonthModel {
 
-    private  Integer workingDays;
-    private  String monthName;
+    private Integer workingDays;
+    private String monthName;
 
     public NextMonthModel() {
     }

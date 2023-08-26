@@ -1,10 +1,14 @@
 package pl.wszib.travelallowance.model;
 
+import jakarta.validation.constraints.NotNull;
+
 import java.time.LocalDate;
 
 public class EmployeePreferencesModel {
+    @NotNull
     private Integer index;
     private String month;
+    @NotNull
     private LocalDate localDate;
     private Shift shift;
 
@@ -22,7 +26,6 @@ public class EmployeePreferencesModel {
     }
 
 
-
     public LocalDate getLocalDate() {
         return localDate;
     }
@@ -33,7 +36,7 @@ public class EmployeePreferencesModel {
 
     public Shift getShift() {
 
-       return shift;
+        return shift;
 
     }
 

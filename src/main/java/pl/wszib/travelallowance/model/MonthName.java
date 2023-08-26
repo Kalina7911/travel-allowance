@@ -1,8 +1,5 @@
 package pl.wszib.travelallowance.model;
 
-import java.time.format.TextStyle;
-import java.util.Locale;
-
 public enum MonthName {
 
     JANUARY("January"),
@@ -24,7 +21,6 @@ public enum MonthName {
     MonthName(String displayName) {
         this.displayName = displayName;
     }
-
 
 
     public String getDisplayName() {

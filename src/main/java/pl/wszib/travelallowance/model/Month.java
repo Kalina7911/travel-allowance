@@ -1,7 +1,7 @@
 package pl.wszib.travelallowance.model;
 
 import jakarta.persistence.*;
-import pl.wszib.travelallowance.model.MonthName;
+
 import java.util.Set;
 
 @Entity
@@ -9,14 +9,14 @@ import java.util.Set;
 public class Month {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="month_id")
+    @Column(name = "month_id")
     private Long id;
-    @Column(name="working_days")
+    @Column(name = "working_days")
     private Integer workingDays;
     @Enumerated(EnumType.STRING)
-    @Column(name = "month_name" )
+    @Column(name = "month_name")
     private MonthName monthName;
-    @OneToMany(mappedBy="month")
+    @OneToMany(mappedBy = "month")
     private Set<EmployeePreferences> employeePreferencesSet;
 
 
@@ -24,7 +24,7 @@ public class Month {
     }
 
     public Month(Long id, MonthName monthName, Integer workingDays) {
-        this.id=id;
+        this.id = id;
         this.workingDays = workingDays;
         this.monthName = monthName;
     }
@@ -37,12 +37,12 @@ public class Month {
         this.workingDays = workingDays;
     }
 
-   public MonthName getMonthName() {
-       return monthName;
-   }
+    public MonthName getMonthName() {
+        return monthName;
+    }
 
-  public void setMonthName(MonthName monthName) {
-      this.monthName = monthName;
-  }
+    public void setMonthName(MonthName monthName) {
+        this.monthName = monthName;
+    }
 }
 

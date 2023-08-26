@@ -11,7 +11,8 @@ import java.util.Optional;
 @Repository
 public interface MonthDao extends JpaRepository<Month, Long> {
 
-   @Query("select m from Month m where m.monthName = ?1")     //tylko dla repository
-   Optional<Month>findByMonthName(MonthName monthName); //serwis
+    @Query("select m from Month m where m.monthName = ?1")
+        //tylko dla repository
+    Optional<Month> findByMonthName(MonthName monthName); //serwis
 
 }

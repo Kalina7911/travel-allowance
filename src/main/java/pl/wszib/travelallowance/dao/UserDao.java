@@ -9,6 +9,7 @@ import pl.wszib.travelallowance.model.User;
 public interface UserDao extends JpaRepository<User, Long> {
 
     User findByName(String name);
+
     User findByIndex(Integer index);
 
     @Query("select (count(u) > 0) from User u where u.index = ?1")

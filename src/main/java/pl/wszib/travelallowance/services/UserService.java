@@ -18,11 +18,11 @@ public class UserService {
     }
 
 
-    public User findByIndex(Integer index){
+    public User findByIndex(Integer index) {
         return userDao.findByIndex(index);
     }
 
-    public User saveUser(UserModel userModel){
+    public User saveUser(UserModel userModel) {
 
         if (userDao.existsByIndex(userModel.getIndex())) {
             throw new UserAlreadyExistException("User already exists");

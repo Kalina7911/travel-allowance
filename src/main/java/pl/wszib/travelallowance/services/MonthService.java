@@ -25,35 +25,35 @@ public class MonthService {
     }
 
 
-   @PostConstruct
-   public void init() {
-       if (!dataInitialized) {
-           monthDao.save(new Month(1L, MonthName.JANUARY, 21));
-           monthDao.save(new Month(2L, MonthName.FEBRUARY, 20));
-           monthDao.save(new Month(3L, MonthName.MARCH, 23));
-           monthDao.save(new Month(4L, MonthName.APRIL, 20));
-           monthDao.save(new Month(5L, MonthName.MAY, 22));
-           monthDao.save(new Month(6L, MonthName.JUNE, 22));
-           monthDao.save(new Month(7L, MonthName.JULY, 21));
-           monthDao.save(new Month(8L, MonthName.AUGUST, 3));
-           monthDao.save(new Month(9L, MonthName.SEPTEMBER, 20));
-           monthDao.save(new Month(10L, MonthName.OCTOBER, 21));
-           monthDao.save(new Month(11L, MonthName.NOVEMBER, 22));
-           monthDao.save(new Month(12L, MonthName.DECEMBER, 23));
-           userDao.save(new User("admin",111,"admin"));
+    @PostConstruct
+    public void init() {
+        if (!dataInitialized) {
+            monthDao.save(new Month(1L, MonthName.JANUARY, 21));
+            monthDao.save(new Month(2L, MonthName.FEBRUARY, 20));
+            monthDao.save(new Month(3L, MonthName.MARCH, 23));
+            monthDao.save(new Month(4L, MonthName.APRIL, 20));
+            monthDao.save(new Month(5L, MonthName.MAY, 22));
+            monthDao.save(new Month(6L, MonthName.JUNE, 22));
+            monthDao.save(new Month(7L, MonthName.JULY, 21));
+            monthDao.save(new Month(8L, MonthName.AUGUST, 21));
+            monthDao.save(new Month(9L, MonthName.SEPTEMBER, 2));
+            monthDao.save(new Month(10L, MonthName.OCTOBER, 21));
+            monthDao.save(new Month(11L, MonthName.NOVEMBER, 22));
+            monthDao.save(new Month(12L, MonthName.DECEMBER, 23));
+            userDao.save(new User("admin", 111, "admin"));
 
-       dataInitialized = true;
+            dataInitialized = true;
+        }
     }
-  }
 
 
     public void editWorkingDays(MonthName monthName, MonthEditModel monthEditModel) {
 
-       Optional<Month> byMonthName = monthDao.findByMonthName(monthName);
+        Optional<Month> byMonthName = monthDao.findByMonthName(monthName);
 
         if (byMonthName.isPresent()) {
-           byMonthName.get().setWorkingDays(monthEditModel.getWorkingDays());
-           monthDao.save(byMonthName.get());
+            byMonthName.get().setWorkingDays(monthEditModel.getWorkingDays());
+            monthDao.save(byMonthName.get());
         }
 
 

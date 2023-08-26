@@ -14,7 +14,7 @@ public class EmployeePreferences {
     @Column(name = "employee_pref_id")
     private Long id;
     @ManyToOne
-   @JoinColumn(name = "month_id")
+    @JoinColumn(name = "month_id")
     private Month month;
     @Column(name = "local_date")
     private LocalDate localDate;

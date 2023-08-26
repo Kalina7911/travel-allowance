@@ -1,128 +1,138 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org"   th:replace="~{fragments/layout :: template (~{:: #preferences-content})}">
+<html lang="en" xmlns:th="https://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: template (~{:: #preferences-content})}">
 
 <section id="preferences-content">
 
     <div class="container">
         <div>
-            <img th:src="@{/img/preferences.jpg}" alt="Preferences" style="width: 100%; height: 200px; object-fit: cover">
+            <img th:src="@{/img/preferences.jpg}" alt="Preferences"
+                 style="width: 100%; height: 200px; object-fit: cover">
         </div>
 
 
         <div style="text-align: center">
             <h2 style="font-size: 2em">Preferences</h2>
-            <p style="font-weight:200">tak tak tak, consectetur adipisicing elit. A accusamus atque deserunt dolor dolore dolores ea eaque eius est excepturi exercitationem illo ipsa ipsum, nam neque nobis odio perferendis quo similique, tempore? Assumenda delectus eligendi et laudantium, modi molestiae quo ullam voluptas. Culpa molestiae nemo officiis placeat voluptates. Aut, mollitia.</p>
+            <p style="font-weight:200">tak tak tak, consectetur adipisicing elit. A accusamus atque deserunt dolor
+                dolore dolores ea eaque eius est excepturi exercitationem illo ipsa ipsum, nam neque nobis odio
+                perferendis quo similique, tempore? Assumenda delectus eligendi et laudantium, modi molestiae quo ullam
+                voluptas. Culpa molestiae nemo officiis placeat voluptates. Aut, mollitia.</p>
         </div>
 
 
-  <!--      <div style=" margin-top: 70px; display: flex; flex-direction: column; align-items: center;">
+        <!--      <div style=" margin-top: 70px; display: flex; flex-direction: column; align-items: center;">
 
-    <form action="#" th:action="@{/preferences}" th:object="${employeePreferencesModel}" method="post" style="text-align: center; transform: scale(2); transform-origin: center;" >
-        <label for="localDate">Date:</label>
-        <input type="date" id="localDate" name="localDate" th:field="*{localDate}" /><br/>
-        <select name="shift" th:field="*{shift}">
-            <option th:each="shiftOpt : ${T(pl.wszib.travelallowance.model.Shift).values()}"
-                    th:value="${shiftOpt}" th:text="${shiftOpt}"></option>
-        </select>
-        <input type="number" id="index" name="index" th:field="*{index}" placeholder="Your index" /><br/>
+          <form action="#" th:action="@{/preferences}" th:object="${employeePreferencesModel}" method="post" style="text-align: center; transform: scale(2); transform-origin: center;" >
+              <label for="localDate">Date:</label>
+              <input type="date" id="localDate" name="localDate" th:field="*{localDate}" /><br/>
+              <select name="shift" th:field="*{shift}">
+                  <option th:each="shiftOpt : ${T(pl.wszib.travelallowance.model.Shift).values()}"
+                          th:value="${shiftOpt}" th:text="${shiftOpt}"></option>
+              </select>
+              <input type="number" id="index" name="index" th:field="*{index}" placeholder="Your index" /><br/>
 
-        <button type="submit">Save</button>
+              <button type="submit">Save</button>
 
-    </form>
-    </div>-->
-     <div style=" margin-top: 70px; display: flex; flex-direction: column; align-items: center;">
-        <form action="#" th:action="@{/preferences}" th:object="${employeePreferencesModel}" method="post"
-              style="text-align: center; transform: scale(2); transform-origin: center;">
-            <label for="localDate">Date:</label>
-            <input type="text" id="localDate" name="localDate" th:field="*{localDate}" placeholder="Select a date" autocomplete="off"><br/>
-            <select name="shift" th:field="*{shift}">
-                <option th:each="shiftOpt : ${T(pl.wszib.travelallowance.model.Shift).values()}"
-                        th:value="${shiftOpt}" th:text="${shiftOpt}"></option>
-            </select>
-            <input type="number" id="index" name="index" th:field="*{index}"  placeholder="Type index" /><br />
-
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.8.0/pikaday.min.js"></script>
-            <script>
-                const picker = new Pikaday({
-                    field: document.getElementById('localDate'),
-                    minDate: new Date(new Date().getFullYear(), new Date().getMonth() + 1, 1), // First day of next month
-                    maxDate: new Date(new Date().getFullYear(), new Date().getMonth() + 2, 0), // Last day of next month
-                    format: 'YYYY-MM-DD', // Format of the selected date
-                    autoClose: true, // Closes the calendar after a date is selected
-                    onSelect: function (date) {
-                        // Format the selected date correctly
-                        const formattedDate = date.toISOString().split('T')[0];
-
-                        // Set the formatted date as the value of the input field
-                        document.getElementById('localDate').value = formattedDate;
-
-                        // Now you can use `formattedDate` to send to the backend
-                        console.log(formattedDate);
-                    }
-                });
-            </script>
-
-            <button type="submit">Save</button>
-        </form>
-    </div>
-    </div>
-
+          </form>
+          </div>-->
         <div style=" margin-top: 70px; display: flex; flex-direction: column; align-items: center;">
+            <form action="#" th:action="@{/preferences}" th:object="${employeePreferencesModel}" method="post"
 
 
-    <form th:action="@{/preferences-list}" method="get">
+                  style="text-align: center; transform: scale(2); transform-origin: center;">
+                <label for="localDate">Date:</label>
+                <input type="text" id="localDate" name="localDate" th:field="*{localDate}" placeholder="Select a date"
+                       autocomplete="off" readonly  ><br/>
 
-        <input type="text" name="index" id="index" placeholder="Enter index">
-        <button type="submit" >Show counter</button>
+                <p th:if="${fieldRequiredError}" th:text="${fieldRequiredError}" style="color: red;"></p>
 
 
-    </form>
+                <select name="shift" th:field="*{shift}">
+                    <option th:each="shiftOpt : ${T(pl.wszib.travelallowance.model.Shift).values()}"
+                            th:value="${shiftOpt}" th:text="${shiftOpt}"></option>
+                </select>
+                <input type="number" id="index" name="index" th:field="*{index}" placeholder="Type index"/><br/>
 
-    <p th:if="${preferences != null}" th:text="${#lists.size(preferences)}"></p>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.8.0/pikaday.min.js"></script>
+                <script>
+                    const currentDate = new Date();
+                    const defaultNextMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1);
 
-            </div>
+                    const year = defaultNextMonth.getFullYear();
+                    const month = (defaultNextMonth.getMonth() + 1).toString().padStart(2, '0');
+                    const day = defaultNextMonth.getDate().toString().padStart(2, '0');
+                    const formattedDefaultDate = `${year}-${month}-${day}`;
 
-   <!-- <h1>Working Days in Month</h1>
+                    const picker = new Pikaday({
+                        field: document.getElementById('localDate'),
+                        minDate: new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1), // First day of next month
+                        maxDate: new Date(currentDate.getFullYear(), currentDate.getMonth() + 2, 0), // Last day of the month after next
+                        defaultDate: new Date(formattedDefaultDate), // Set the default date to the first day of next month
+                        format: 'YYYY-MM-DD', // Format of the selected date
+                        autoClose: true, // Closes the calendar after a date is selected,
+                        onSelect: function (date) {
+                            // Format the selected date correctly
+                            const formattedDate = date.toISOString().split('T')[0];
 
-    <form th:action="@{/working-days}" method="get">
-        <label for="month">Select Month:</label>
-        <select name="month" id="month">
-            <option value="1">January</option>
-            <option value="2">February</option>
-            <option value="12">December</option>
-        </select>
-        <button type="submit">Get Working Days</button>
-    </form>
+                            // Set the formatted date as the value of the input field
+                            document.getElementById('localDate').value = formattedDate;
 
-    <div th:if="${monthDisplayName}">
-        <p>Month: <span th:text="${monthDisplayName}"></span></p>
-        <p>Working Days: <span th:text="${workingDays}"></span></p>
+                            // Now you can use `formattedDate` to send to the backend
+                            console.log(formattedDate);
+                        }
+                    });
+                </script>
+
+                <button type="submit">Save</button>
+            </form>
+
+
+        </div>
     </div>
 
-    <div th:if="${not monthDisplayName}">
-        <p>No data available for the selected month.</p>
-    </div>-->
+    <div style=" margin-top: 70px; display: flex; flex-direction: column; align-items: center;">
 
-        <p th:if="${errorMessage}" th:text="${errorMessage}" style="color: red;"></p>
-        <div th:if="${successMessage}" class="success-message">
-            <p th:text="${successMessage}" class="alert alert-success"></p>
+
+        <form th:action="@{/preferences-list}" method="get">
+
+            <input type="text" name="index" id="index" placeholder="Enter index">
+            <button type="submit">Show counter</button>
+
+
+        </form>
+
+        <p th:if="${preferences != null}" th:text="${#lists.size(preferences)}"></p>
+
+    </div>
+
+    <h1>Working Days in Month</h1>
+    <!--
+        <form th:action="@{/working-days}" method="get">
+            <label for="month">Select Month:</label>
+            <select name="month" id="month">
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="12">December</option>
+            </select>
+            <button type="submit">Get Working Days</button>
+        </form>
+
+        <div th:if="${monthDisplayName}">
+            <p>Month: <span th:text="${monthDisplayName}"></span></p>
+            <p>Working Days: <span th:text="${workingDays}"></span></p>
         </div>
+
+        <div th:if="${not monthDisplayName}">
+            <p>No data available for the selected month.</p>
+        </div>-->
+
+    <p th:if="${errorMessage}" th:text="${errorMessage}" style="color: red;"></p>
+    <div th:if="${successMessage}" class="success-message">
+        <p th:text="${successMessage}" class="alert alert-success"></p>
+    </div>
 
     </div>
 </section>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var currentDate = new Date();
-        var nextMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1);
-        var lastDayNextMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 2, 0);
 
-        var datePicker = new Datepicker(document.getElementById('localDate'), {
-            minDate: nextMonth,
-            maxDate: lastDayNextMonth,
-            autohide: true, // Hides the calendar when a date is selected
-            format: 'yyyy-mm-dd' // Format of the selected date
-        });
-    });
-</script>
 </html>

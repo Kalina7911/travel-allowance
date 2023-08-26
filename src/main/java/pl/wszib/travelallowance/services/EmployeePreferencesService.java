@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import pl.wszib.travelallowance.dao.EmployeePreferencesDao;
 import pl.wszib.travelallowance.dao.MonthDao;
 import pl.wszib.travelallowance.dao.UserDao;
-import pl.wszib.travelallowance.exceptions.WorkingDaysException;
 import pl.wszib.travelallowance.model.*;
 
 import java.time.LocalDate;
@@ -20,20 +19,22 @@ public class EmployeePreferencesService {
     private final UserDao userDao;
     private final MonthDao monthDao;
     private final EmployeePreferencesDao employeePreferencesDao;
+    private final ValidationService validationService;
 
 
-    public EmployeePreferencesService(EmployeePreferencesDao employeePreferencesDao, UserDao userDao, MonthDao monthDao) {
+    public EmployeePreferencesService(EmployeePreferencesDao employeePreferencesDao, UserDao userDao, MonthDao monthDao, ValidationService validationService) {
         this.employeePreferencesDao = employeePreferencesDao;
         this.userDao = userDao;
         this.monthDao = monthDao;
 
+        this.validationService = validationService;
     }
 
     @Transactional
     public void savePreferences(EmployeePreferencesModel employeePreferencesModel) {
         String monthFromLocalDate = employeePreferencesModel.getLocalDate().getMonth().toString();
         Month month = monthDao.findByMonthName(MonthName.valueOf(monthFromLocalDate)).orElse(null);
-        compareWorkingDays(month,employeePreferencesModel.getIndex().toString());
+        validationService.compareWorkingDays(month, employeePreferencesModel.getIndex().toString());
         EmployeePreferences preferences = new EmployeePreferences();
 
         User user = userDao.findByIndex(employeePreferencesModel.getIndex());
@@ -127,15 +128,7 @@ public class EmployeePreferencesService {
     }
 
 
-    public void compareWorkingDays(Month month, String index) {
-        List<EmployeePreferencesModel> preferences = findAllPreferences(month.getMonthName().toString(), index);
-        int employeeWorkingDays = preferences.size();
 
-        Integer requiredWorkingDays = month.getWorkingDays();
-        if (employeeWorkingDays > requiredWorkingDays) {
-            int daysToRemove = employeeWorkingDays - requiredWorkingDays;
-            throw new WorkingDaysException("You need to deselect " + daysToRemove);
-        }
 
 
 
@@ -154,7 +147,6 @@ public class EmployeePreferencesService {
     */
 
 
-    }
 }
 
 

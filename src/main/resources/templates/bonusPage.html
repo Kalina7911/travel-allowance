@@ -7,16 +7,15 @@
 
     <div class="container">
         <div>
-            <img th:src="@{/img/bonus.jpg}" alt="Bonus" style="width: 100%; height: 200px; object-fit: cover">
+            <img th:src="@{/img/bonus.jpg}" alt="Bonus">
         </div>
 
 
-            <h2 style="text-align: center; font-size:2em">Rate of Allowance</h2>
-        <div style=" margin-top: 90px; display: flex; flex-direction: column; align-items: center;transform: scale(1.5)">
+        <h2>Rate of Allowance</h2>
         <form th:action="@{/calculate-bonus}" method="get">
             <label for="index">Enter Your Index:</label>
             <input type="number" id="index" name="index" required>
-            <div style="margin-top: 10px">
+
             <label for="month">Select Month:</label>
             <select id="month" name="month">
                 <option value="JANUARY">January</option>
@@ -32,19 +31,19 @@
                 <option value="NOVEMBER">November</option>
                 <option value="DECEMBER">December</option>
             </select>
+            <div>
+                <button type="submit">Calculate</button>
             </div>
-            <div style="margin-top: 10px">
-            <button type="submit">Calculate</button>
-                </div>
         </form>
 
-            <div style="margin-top: 30px">
 
-        <p>Your Travel Allowance: <span th:text="${travelAllowance}"></span></p>
-        <p>Number of PM Shifts: <span th:text="${numberOfPMShifts}"></span></p>
-</div>
 
-    </div>
+        <div>
+
+            <p>Your Travel Allowance: <span th:text="${travelAllowance}"></span>PLN</p>
+            <p>Number of PM Shifts: <span th:text="${numberOfPMShifts}"></span></p>
+        </div>
+
     </div>
 
 </section>

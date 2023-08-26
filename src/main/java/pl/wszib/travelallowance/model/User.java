@@ -7,23 +7,21 @@ import java.util.Set;
 
 
 @Entity
-@Table (name="users")
+@Table(name = "users")
 public class User {
 
     @Id
     @GeneratedValue
-    @Column (name = "user_id")
+    @Column(name = "user_id")
     private Long id;
     @Column(name = "name")
     private String name;
     @Column(name = "index")
     private Integer index;
-    @Column(name="password")
+    @Column(name = "password")
     private String password;
-    @OneToMany(mappedBy="user")
-    private Set<EmployeePreferences>employeePreferences;
-
-
+    @OneToMany(mappedBy = "user")
+    private Set<EmployeePreferences> employeePreferences;
 
 
     public User() {
