@@ -20,32 +20,11 @@
         </div>
 
 
-        <!--      <div style=" margin-top: 70px; display: flex; flex-direction: column; align-items: center;">
 
-          <form action="#" th:action="@{/preferences}" th:object="${employeePreferencesModel}" method="post" style="text-align: center; transform: scale(2); transform-origin: center;" >
-              <label for="localDate">Date:</label>
-              <input type="date" id="localDate" name="localDate" th:field="*{localDate}" /><br/>
-              <select name="shift" th:field="*{shift}">
-                  <option th:each="shiftOpt : ${T(pl.wszib.travelallowance.model.Shift).values()}"
-                          th:value="${shiftOpt}" th:text="${shiftOpt}"></option>
-              </select>
-              <input type="number" id="index" name="index" th:field="*{index}" placeholder="Your index" /><br/>
-
-              <button type="submit">Save</button>
-
-          </form>
-          </div>-->
-        <div style=" margin-top: 70px; display: flex; flex-direction: column; align-items: center;">
-            <form action="#" th:action="@{/preferences}" th:object="${employeePreferencesModel}" method="post"
-
-
-                  style="text-align: center; transform: scale(2); transform-origin: center;">
-                <label for="localDate">Date:</label>
-                <input type="text" id="localDate" name="localDate" th:field="*{localDate}" placeholder="Select a date"
-                       autocomplete="off" readonly  ><br/>
-
-                <p th:if="${fieldRequiredError}" th:text="${fieldRequiredError}" style="color: red;"></p>
-
+        <!--<div style=" margin-top: 70px; display: flex; flex-direction: column; align-items: center;">-->
+            <form th:action="@{/preferences}" th:object="${employeePreferencesModel}" method="post">
+                <label  for="localDate">Select Date</label>
+                <input type="text" id="localDate" name="localDate" th:field="*{localDate}" placeholder="Calendar" autocomplete="off" readonly>
 
                 <select name="shift" th:field="*{shift}">
                     <option th:each="shiftOpt : ${T(pl.wszib.travelallowance.model.Shift).values()}"
@@ -54,34 +33,64 @@
                 <input type="number" id="index" name="index" th:field="*{index}" placeholder="Type index"/><br/>
 
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.8.0/pikaday.min.js"></script>
-                <script>
-                    const currentDate = new Date();
-                    const defaultNextMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1);
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.36/moment-timezone-with-data.min.js"></script>
 
-                    const year = defaultNextMonth.getFullYear();
-                    const month = (defaultNextMonth.getMonth() + 1).toString().padStart(2, '0');
-                    const day = defaultNextMonth.getDate().toString().padStart(2, '0');
-                    const formattedDefaultDate = `${year}-${month}-${day}`;
+                <script>
+                    const currentDate = moment().tz('Europe/Warsaw');
+                    const defaultNextMonth = moment(currentDate).add(1, 'month').startOf('month');
+
+                    const year = defaultNextMonth.year();
+                    const month = defaultNextMonth.month() + 1;
+                    const formattedDefaultDate = defaultNextMonth.format('YYYY-MM-DD');
 
                     const picker = new Pikaday({
                         field: document.getElementById('localDate'),
-                        minDate: new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1), // First day of next month
-                        maxDate: new Date(currentDate.getFullYear(), currentDate.getMonth() + 2, 0), // Last day of the month after next
-                        defaultDate: new Date(formattedDefaultDate), // Set the default date to the first day of next month
-                        format: 'YYYY-MM-DD', // Format of the selected date
-                        autoClose: true, // Closes the calendar after a date is selected,
+                        minDate: moment(currentDate).add(1, 'month').startOf('month').toDate(),
+                        maxDate: moment(currentDate).add(1, 'month').endOf('month').toDate(),
+                        defaultDate: formattedDefaultDate,
+                        setDefaultDate: true,
+                        format: 'YYYY-MM-DD',
+                        autoClose: true,
                         onSelect: function (date) {
-                            // Format the selected date correctly
-                            const formattedDate = date.toISOString().split('T')[0];
-
-                            // Set the formatted date as the value of the input field
+                            const formattedDate = moment(date).format('YYYY-MM-DD');
                             document.getElementById('localDate').value = formattedDate;
-
-                            // Now you can use `formattedDate` to send to the backend
                             console.log(formattedDate);
                         }
                     });
                 </script>
+
+
+                <!--   <script>
+                       const currentDate = new Date();
+                       const defaultNextMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1);
+
+                       const year = defaultNextMonth.getFullYear();
+                       const month = (defaultNextMonth.getMonth() + 1).toString().padStart(2, '0');
+                       const day = defaultNextMonth.getDate().toString().padStart(2, '0');
+                       const formattedDefaultDate = `${year}-${month}-${day}`;
+
+                       const picker = new Pikaday({
+                           field: document.getElementById('localDate'),
+                           minDate: new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1), // First day of next month
+                           maxDate: new Date(currentDate.getFullYear(), currentDate.getMonth() + 2, 0), // Last day of the month after next
+                           defaultDate: new Date(formattedDefaultDate), // Set the default date to the first day of next month
+                           format: 'YYYY-MM-DD', // Format of the selected date
+                           autoClose: true, // Closes the calendar after a date is selected,
+                           onSelect: function (date) {
+                               // Format the selected date correctly
+                               const formattedDate = date.toISOString().split('T')[0];
+
+                               // Set the formatted date as the value of the input field
+                               document.getElementById('localDate').value = formattedDate;
+
+                               // Now you can use `formattedDate` to send to the backend
+                               console.log(formattedDate);
+                           }
+                       });
+                   </script>-->
+
+                <p th:if="${fieldRequiredError}" th:text="${fieldRequiredError}" style="color: black;"></p>
 
                 <button type="submit">Save</button>
             </form>
@@ -95,8 +104,8 @@
 
         <form th:action="@{/preferences-list}" method="get">
 
-            <input type="text" name="index" id="index" placeholder="Enter index">
-            <button type="submit">Show counter</button>
+            <!--<input type="text" name="index" id="index" placeholder="Enter index">
+            <button type="submit">Show counter</button>-->
 
 
         </form>

@@ -161,6 +161,86 @@ span {
 }
 
 
+#preferences-content {
+
+    text-align: center;
+
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+/*  obraz */
+img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+
+}
+
+/* Stylowanie nagłówka */
+h2 {
+    font-size: 2em;
+}
+
+/* Stylowanie formularza */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+/* Stylowanie etykiety */
+label {
+    margin-bottom: 5px;
+
+}
+
+/* Stylowanie pola wprowadzania */
+input[type="number"],
+select {
+    width: 40%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+/* Stylowanie przycisku */
+button {
+    background-color: rgba(255, 174, 0, 0.65);
+    color: #2B2B2BFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: rgba(199, 120, 0, 0.65);
+}
+
+/* Stylowanie paragrafów */
+p {
+    margin-top: 40px;
+    text-align: justify;
+    font-size: larger;
+
+}
+
+/* Stylowanie spanów z danymi */
+span {
+    font-weight: bold;
+}
+
 
 
 

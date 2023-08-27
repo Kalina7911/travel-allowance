@@ -31,7 +31,7 @@ public class MyExceptionHandler {
 
     @ExceptionHandler(value = {MethodArgumentNotValidException.class})
     public String handlerNull(MethodArgumentNotValidException ex, RedirectAttributes redirectAttributes) {
-        redirectAttributes.addFlashAttribute("fieldRequiredError", "All Fields Required");
+        redirectAttributes.addFlashAttribute("fieldRequiredError", "All Fields Are Required");
 
         return "redirect:/preferences";
 

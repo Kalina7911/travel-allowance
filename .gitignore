@@ -32,3 +32,4 @@ build/
 ### VS Code ###
 .vscode/
 /src/main/resources/ds.properties
+/src/main/resources/db-template.properties
