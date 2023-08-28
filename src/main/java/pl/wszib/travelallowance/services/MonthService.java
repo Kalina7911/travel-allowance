@@ -40,7 +40,7 @@ public class MonthService {
             monthDao.save(new Month(10L, MonthName.OCTOBER, 21));
             monthDao.save(new Month(11L, MonthName.NOVEMBER, 22));
             monthDao.save(new Month(12L, MonthName.DECEMBER, 23));
-            userDao.save(new User("admin", 111, "admin"));
+            userDao.save(new User("admin", 111, "admin", 1L));
 
             dataInitialized = true;
         }

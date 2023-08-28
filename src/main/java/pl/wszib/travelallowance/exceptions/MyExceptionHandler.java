@@ -16,15 +16,13 @@ public class MyExceptionHandler {
 
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
 
-
     }
 
-    @ExceptionHandler(value = {WorkingDaysException.class})
-    public String handlerWorkingDays(WorkingDaysException ex, RedirectAttributes redirectAttributes) {
+    @ExceptionHandler(value = {WorkingDaysException.class, ShiftException.class})
+    public String handlerWorkingDaysAndShifts(RuntimeException ex, RedirectAttributes redirectAttributes) {
         redirectAttributes.addFlashAttribute("errorMessage", ex.getMessage());
 
         return "redirect:/preferences";
-
 
     }
 
@@ -34,8 +32,6 @@ public class MyExceptionHandler {
         redirectAttributes.addFlashAttribute("fieldRequiredError", "All Fields Are Required");
 
         return "redirect:/preferences";
-
-
     }
 }
 

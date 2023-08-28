@@ -8,12 +8,9 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import pl.wszib.travelallowance.model.EmployeePreferencesModel;
 import pl.wszib.travelallowance.services.EmployeePreferencesService;
-
-import java.time.LocalDate;
 
 @Controller
 public class EmployeePreferencesController {
@@ -38,15 +35,16 @@ public class EmployeePreferencesController {
             return "preferencesPage";
         }
 
-        redirectAttributes.addFlashAttribute("successMessage", "Preferences added successfully!");
+        redirectAttributes.addFlashAttribute("successMessage", "Preference added");
 
-        employeePreferencesService.savePreferences(employeePreferencesModel); // save preferencji
+        String message = employeePreferencesService.savePreferences(employeePreferencesModel);// save preferencji
+        redirectAttributes.addFlashAttribute("generalMessage", message);
 
 
         return "redirect:/preferences";
     }
 
-    @GetMapping("/preferences-list")   ///{month}, (@PathVariable ("month") String month,
+    /*@GetMapping("/preferences-list")   ///{month}, (@PathVariable ("month") String month,
     public String findAllPreferences(@RequestParam("index") String index, Model model) {
         String month = LocalDate.now().plusMonths(1).getMonth().toString();
         model.addAttribute("month", month);
@@ -56,14 +54,7 @@ public class EmployeePreferencesController {
 
         return "preferencesPage";
 
-    }
-
-    @GetMapping("/preferences-month")
-    public String findNextMonth(Model model) {
-        model.addAttribute("nextMonth", employeePreferencesService.findNextMonth());
-
-        return "preferencesPage";
-    }
+    }*/
 
 
 }

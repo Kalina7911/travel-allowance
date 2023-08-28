@@ -6,7 +6,7 @@ import org.springframework.context.annotation.PropertySource;
 
 
 @SpringBootApplication
-//@PropertySource("classpath:db-template.properties")
+@PropertySource("classpath:db-template.properties")
 public class TravelAllowanceApplication {
 
     public static void main(String[] args) {

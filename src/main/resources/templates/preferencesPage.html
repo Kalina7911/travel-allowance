@@ -6,142 +6,104 @@
 
     <div class="container">
         <div>
-            <img th:src="@{/img/preferences.jpg}" alt="Preferences"
-                 style="width: 100%; height: 200px; object-fit: cover">
+            <img th:src="@{/img/preferences.jpg}" alt="Preferences">
         </div>
 
-
-        <div style="text-align: center">
-            <h2 style="font-size: 2em">Preferences</h2>
-            <p style="font-weight:200">tak tak tak, consectetur adipisicing elit. A accusamus atque deserunt dolor
-                dolore dolores ea eaque eius est excepturi exercitationem illo ipsa ipsum, nam neque nobis odio
-                perferendis quo similique, tempore? Assumenda delectus eligendi et laudantium, modi molestiae quo ullam
-                voluptas. Culpa molestiae nemo officiis placeat voluptates. Aut, mollitia.</p>
-        </div>
+        <h2>Preferences</h2>
+        <p class="normal">Please select the working days for the given month and then choose your preferred shift: AM or
+            PM. <b>Important! All fields must be filled in.</b></p>
 
 
-
-        <!--<div style=" margin-top: 70px; display: flex; flex-direction: column; align-items: center;">-->
-            <form th:action="@{/preferences}" th:object="${employeePreferencesModel}" method="post">
-                <label  for="localDate">Select Date</label>
-                <input type="text" id="localDate" name="localDate" th:field="*{localDate}" placeholder="Calendar" autocomplete="off" readonly>
-
-                <select name="shift" th:field="*{shift}">
-                    <option th:each="shiftOpt : ${T(pl.wszib.travelallowance.model.Shift).values()}"
-                            th:value="${shiftOpt}" th:text="${shiftOpt}"></option>
-                </select>
-                <input type="number" id="index" name="index" th:field="*{index}" placeholder="Type index"/><br/>
-
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.8.0/pikaday.min.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.36/moment-timezone-with-data.min.js"></script>
-
-                <script>
-                    const currentDate = moment().tz('Europe/Warsaw');
-                    const defaultNextMonth = moment(currentDate).add(1, 'month').startOf('month');
-
-                    const year = defaultNextMonth.year();
-                    const month = defaultNextMonth.month() + 1;
-                    const formattedDefaultDate = defaultNextMonth.format('YYYY-MM-DD');
-
-                    const picker = new Pikaday({
-                        field: document.getElementById('localDate'),
-                        minDate: moment(currentDate).add(1, 'month').startOf('month').toDate(),
-                        maxDate: moment(currentDate).add(1, 'month').endOf('month').toDate(),
-                        defaultDate: formattedDefaultDate,
-                        setDefaultDate: true,
-                        format: 'YYYY-MM-DD',
-                        autoClose: true,
-                        onSelect: function (date) {
-                            const formattedDate = moment(date).format('YYYY-MM-DD');
-                            document.getElementById('localDate').value = formattedDate;
-                            console.log(formattedDate);
-                        }
-                    });
-                </script>
-
-
-                <!--   <script>
-                       const currentDate = new Date();
-                       const defaultNextMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1);
-
-                       const year = defaultNextMonth.getFullYear();
-                       const month = (defaultNextMonth.getMonth() + 1).toString().padStart(2, '0');
-                       const day = defaultNextMonth.getDate().toString().padStart(2, '0');
-                       const formattedDefaultDate = `${year}-${month}-${day}`;
-
-                       const picker = new Pikaday({
-                           field: document.getElementById('localDate'),
-                           minDate: new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1), // First day of next month
-                           maxDate: new Date(currentDate.getFullYear(), currentDate.getMonth() + 2, 0), // Last day of the month after next
-                           defaultDate: new Date(formattedDefaultDate), // Set the default date to the first day of next month
-                           format: 'YYYY-MM-DD', // Format of the selected date
-                           autoClose: true, // Closes the calendar after a date is selected,
-                           onSelect: function (date) {
-                               // Format the selected date correctly
-                               const formattedDate = date.toISOString().split('T')[0];
-
-                               // Set the formatted date as the value of the input field
-                               document.getElementById('localDate').value = formattedDate;
-
-                               // Now you can use `formattedDate` to send to the backend
-                               console.log(formattedDate);
-                           }
-                       });
-                   </script>-->
-
-                <p th:if="${fieldRequiredError}" th:text="${fieldRequiredError}" style="color: black;"></p>
-
-                <button type="submit">Save</button>
-            </form>
-
-
-        </div>
-    </div>
-
-    <div style=" margin-top: 70px; display: flex; flex-direction: column; align-items: center;">
-
-
-        <form th:action="@{/preferences-list}" method="get">
-
-            <!--<input type="text" name="index" id="index" placeholder="Enter index">
-            <button type="submit">Show counter</button>-->
-
-
-        </form>
-
-        <p th:if="${preferences != null}" th:text="${#lists.size(preferences)}"></p>
-
-    </div>
-
-    <h1>Working Days in Month</h1>
-    <!--
-        <form th:action="@{/working-days}" method="get">
-            <label for="month">Select Month:</label>
-            <select name="month" id="month">
-                <option value="1">January</option>
-                <option value="2">February</option>
-                <option value="12">December</option>
+        <form th:action="@{/preferences}" th:object="${employeePreferencesModel}" method="post">
+            <label for="localDate">Select Date</label>
+            <input type="text" id="localDate" name="localDate" th:field="*{localDate}" placeholder="Calendar"
+                   autocomplete="off" readonly>
+            <label for="shift">Select Shift</label>
+            <select id="shift" name="shift" th:field="*{shift}">
+                <option th:each="shiftOpt : ${T(pl.wszib.travelallowance.model.Shift).values()}"
+                        th:value="${shiftOpt}" th:text="${shiftOpt}"></option>
             </select>
-            <button type="submit">Get Working Days</button>
+
+            <label for="index">Enter Your Index</label>
+            <input type="number" id="index" name="index" th:field="*{index}" placeholder="Type index"/><br/>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.8.0/pikaday.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.36/moment-timezone-with-data.min.js"></script>
+
+            <script>
+                const currentDate = moment().tz('Europe/Warsaw');
+                const defaultNextMonth = moment(currentDate).add(1, 'month').startOf('month');
+
+                const year = defaultNextMonth.year();
+                const month = defaultNextMonth.month() + 1;
+                const formattedDefaultDate = defaultNextMonth.format('YYYY-MM-DD');
+
+                const picker = new Pikaday({
+                    field: document.getElementById('localDate'),
+                    minDate: moment(currentDate).add(1, 'month').startOf('month').toDate(),
+                    maxDate: moment(currentDate).add(1, 'month').endOf('month').toDate(),
+                    defaultDate: formattedDefaultDate,
+                    setDefaultDate: true,
+                    format: 'YYYY-MM-DD',
+                    autoClose: true,
+                    onSelect: function (date) {
+                        const formattedDate = moment(date).format('YYYY-MM-DD');
+                        document.getElementById('localDate').value = formattedDate;
+                        console.log(formattedDate);
+                        console.log(formattedDefaultDate);
+
+                    }
+                });
+            </script>
+
+
+            <!--   <script>
+                   const currentDate = new Date();
+                   const defaultNextMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1);
+
+                   const year = defaultNextMonth.getFullYear();
+                   const month = (defaultNextMonth.getMonth() + 1).toString().padStart(2, '0');
+                   const day = defaultNextMonth.getDate().toString().padStart(2, '0');
+                   const formattedDefaultDate = `${year}-${month}-${day}`;
+
+                   const picker = new Pikaday({
+                       field: document.getElementById('localDate'),
+                       minDate: new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1), // First day of next month
+                       maxDate: new Date(currentDate.getFullYear(), currentDate.getMonth() + 2, 0), // Last day of the month after next
+                       defaultDate: new Date(formattedDefaultDate), // Set the default date to the first day of next month
+                       format: 'YYYY-MM-DD', // Format of the selected date
+                       autoClose: true, // Closes the calendar after a date is selected,
+                       onSelect: function (date) {
+                           // Format the selected date correctly
+                           const formattedDate = date.toISOString().split('T')[0];
+
+                           // Set the formatted date as the value of the input field
+                           document.getElementById('localDate').value = formattedDate;
+
+                           // Now you can use `formattedDate` to send to the backend
+                           console.log(formattedDate);
+                       }
+                   });
+               </script>-->
+
+            <p th:if="${fieldRequiredError}" th:text="${fieldRequiredError}" class="fieldRequiredError"></p>
+
+            <button type="submit">Save</button>
+
         </form>
 
-        <div th:if="${monthDisplayName}">
-            <p>Month: <span th:text="${monthDisplayName}"></span></p>
-            <p>Working Days: <span th:text="${workingDays}"></span></p>
+        <div th:if="${errorMessage}">
+            <p th:text="${errorMessage}" class="error-message"></p>
+        </div>
+        <div th:if="${successMessage}">
+            <p th:text="${successMessage}" class="success-message"></p>
         </div>
 
-        <div th:if="${not monthDisplayName}">
-            <p>No data available for the selected month.</p>
-        </div>-->
-
-    <p th:if="${errorMessage}" th:text="${errorMessage}" style="color: red;"></p>
-    <div th:if="${successMessage}" class="success-message">
-        <p th:text="${successMessage}" class="alert alert-success"></p>
-    </div>
+        <div th:if="${generalMessage}">
+            <p th:text="${generalMessage}" class="generalMessage"></p>
+        </div>
 
     </div>
 </section>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.js"></script>
-
 </html>

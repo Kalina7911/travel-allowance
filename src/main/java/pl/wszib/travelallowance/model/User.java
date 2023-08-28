@@ -28,10 +28,11 @@ public class User {
 
     }
 
-    public User(String name, Integer index, String password) {
+    public User(String name, Integer index, String password, Long id) {
         this.name = name;
         this.index = index;
         this.password = password;
+        this.id=id;
     }
 
 

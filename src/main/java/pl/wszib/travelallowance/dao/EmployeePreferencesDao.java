@@ -22,6 +22,9 @@ public interface EmployeePreferencesDao extends JpaRepository<EmployeePreference
     @Query("select distinct e from EmployeePreferences e where e.user.index = ?1 and e.localDate = ?2")
     Optional<EmployeePreferences> findByIndexAndLocalDate(LocalDate localDate);
 
+    @Query("select (count(e) > 0) from EmployeePreferences e where e.user.index = ?1 and e.localDate = ?2")
+    boolean existsByIndexAndLocalDate(Integer index, LocalDate localDate);
+
 
 }
 

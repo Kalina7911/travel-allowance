@@ -31,10 +31,11 @@ public class EmployeePreferencesService {
     }
 
     @Transactional
-    public void savePreferences(EmployeePreferencesModel employeePreferencesModel) {
+    public String savePreferences(EmployeePreferencesModel employeePreferencesModel) {
+        validationService.validateDayShift(employeePreferencesModel);
         String monthFromLocalDate = employeePreferencesModel.getLocalDate().getMonth().toString();
         Month month = monthDao.findByMonthName(MonthName.valueOf(monthFromLocalDate)).orElse(null);
-        validationService.compareWorkingDays(month, employeePreferencesModel.getIndex().toString());
+        String successMessage = validationService.compareWorkingDays(month, employeePreferencesModel.getIndex().toString());
         EmployeePreferences preferences = new EmployeePreferences();
 
         User user = userDao.findByIndex(employeePreferencesModel.getIndex());
@@ -47,6 +48,8 @@ public class EmployeePreferencesService {
 
 
         employeePreferencesDao.save(preferences);
+
+        return successMessage;
     }
 
     public List<EmployeePreferencesModel> findAllPreferences(String month, String index) {
@@ -90,24 +93,6 @@ public class EmployeePreferencesService {
     }
 
 
-    public NextMonthModel findNextMonth() {
-        String month = LocalDate.now().plusMonths(1).getMonth().toString();
-        Optional<Month> nextMonth = monthDao.findByMonthName(MonthName.valueOf(month));
-
-        if (nextMonth.isPresent()) {
-
-            NextMonthModel nextMonthModel = new NextMonthModel();
-            nextMonthModel.setMonthName(nextMonthModel.getMonthName());
-            nextMonthModel.setWorkingDays(nextMonthModel.getWorkingDays());
-
-            return nextMonthModel;
-
-        } else {
-            return null;
-        }
-
-    }
-
 
     public Optional<Month> findByMonthName(MonthName monthName) {
         return monthDao.findByMonthName(monthName);
@@ -126,25 +111,6 @@ public class EmployeePreferencesService {
 
         return numberOfPMShifts;
     }
-
-
-
-
-
-
-       /* " days";
-        } String comparisonResult;
-        if (employeeWorkingDays == requiredWorkingDays) {
-            comparisonResult = "Correct";
-        } else if (employeeWorkingDays < requiredWorkingDays) {
-            int daysToAdd = requiredWorkingDays - employeeWorkingDays;
-            comparisonResult = "You need to select " + daysToAdd + " more working days";
-        } else {
-            int daysToRemove = employeeWorkingDays - requiredWorkingDays;
-            comparisonResult = "You need to deselect " + daysToRemove +
-
-        return comparisonResult;
-    */
 
 
 }

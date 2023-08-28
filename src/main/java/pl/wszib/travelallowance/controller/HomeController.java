@@ -10,12 +10,6 @@ import pl.wszib.travelallowance.services.EmployeePreferencesService;
 public class HomeController {
 
 
-    private final EmployeePreferencesService employeePreferencesService;
-
-    public HomeController(EmployeePreferencesService employeePreferencesService) {
-        this.employeePreferencesService = employeePreferencesService;
-    }
-
 
     @GetMapping("/")
     public String homePage(Model model) {
