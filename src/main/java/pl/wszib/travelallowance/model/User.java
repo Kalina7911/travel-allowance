@@ -32,7 +32,7 @@ public class User {
         this.name = name;
         this.index = index;
         this.password = password;
-        this.id=id;
+        this.id = id;
     }
 
 

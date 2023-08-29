@@ -33,7 +33,7 @@ public class UserService {
         user.setIndex(userModel.getIndex());
         user.setName(userModel.getName());
         user.setPassword(userModel.getPassword());
-        return userDao.save(user);        //tworzenie konta uzytkownika
+        return userDao.save(user);
     }
 
 

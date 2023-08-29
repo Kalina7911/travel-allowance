@@ -93,7 +93,6 @@ public class EmployeePreferencesService {
     }
 
 
-
     public Optional<Month> findByMonthName(MonthName monthName) {
         return monthDao.findByMonthName(monthName);
     }

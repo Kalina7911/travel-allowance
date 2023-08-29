@@ -24,7 +24,7 @@ public class EmployeePreferencesController {
 
     @GetMapping("/preferences")
     public String preferencesPage(Model model) {
-        model.addAttribute("employeePreferencesModel", new EmployeePreferencesModel()); // dodanie pustego obiektu do modelu
+        model.addAttribute("employeePreferencesModel", new EmployeePreferencesModel());
         return "preferencesPage";
     }
 
@@ -43,18 +43,5 @@ public class EmployeePreferencesController {
 
         return "redirect:/preferences";
     }
-
-    /*@GetMapping("/preferences-list")   ///{month}, (@PathVariable ("month") String month,
-    public String findAllPreferences(@RequestParam("index") String index, Model model) {
-        String month = LocalDate.now().plusMonths(1).getMonth().toString();
-        model.addAttribute("month", month);
-        model.addAttribute("index", index);
-        model.addAttribute("employeePreferencesModel", new EmployeePreferencesModel());
-        model.addAttribute("preferences", employeePreferencesService.findAllPreferences(month, index));
-
-        return "preferencesPage";
-
-    }*/
-
 
 }

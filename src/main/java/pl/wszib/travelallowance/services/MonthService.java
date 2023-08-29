@@ -17,7 +17,7 @@ public class MonthService {
 
     private final UserDao userDao;
     private final MonthDao monthDao;
-    private boolean dataInitialized = false; // W ten sposób dane zostaną zainicjowane tylko raz.
+    private boolean dataInitialized = false;
 
     public MonthService(UserDao userDao, MonthDao monthDao) {
         this.userDao = userDao;
