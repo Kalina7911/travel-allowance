@@ -34,7 +34,6 @@ public class ValidationService {
         } else if (employeeWorkingDays < requiredWorkingDays) {
             int daysToAdd = requiredWorkingDays - employeeWorkingDays;
             return "Missing working days: " + daysToAdd;
-
         }
         return "You have marked all the required working days.Thanks";
     }
