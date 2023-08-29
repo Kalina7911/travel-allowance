@@ -38,9 +38,10 @@ public class EmployeePreferencesService {
         String successMessage = validationService.compareWorkingDays(month, employeePreferencesModel.getIndex().toString());
         EmployeePreferences preferences = new EmployeePreferences();
 
-        User user = userDao.findByIndex(employeePreferencesModel.getIndex());
+        Optional<User> user = userDao.findByIndex(employeePreferencesModel.getIndex());
+        validationService.validateUser(user);
 
-        preferences.setUser(user);
+        preferences.setUser(user.get());
 
         preferences.setMonth(month);
         preferences.setLocalDate(employeePreferencesModel.getLocalDate());

@@ -19,7 +19,7 @@ public class UserService {
 
 
     public User findByIndex(Integer index) {
-        return userDao.findByIndex(index);
+        return userDao.findByIndex(index).get();
     }
 
     public User saveUser(UserModel userModel) {

@@ -1,5 +1,6 @@
 package pl.wszib.travelallowance.exceptions;
 
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -18,7 +19,7 @@ public class MyExceptionHandler {
 
     }
 
-    @ExceptionHandler(value = {WorkingDaysException.class, ShiftException.class})
+    @ExceptionHandler(value = {WorkingDaysException.class, ShiftException.class, EntityNotFoundException.class})
     public String handlerWorkingDaysAndShifts(RuntimeException ex, RedirectAttributes redirectAttributes) {
         redirectAttributes.addFlashAttribute("errorMessage", ex.getMessage());
 
