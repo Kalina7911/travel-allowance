@@ -37,7 +37,7 @@ public class EmployeePreferencesController {
 
         redirectAttributes.addFlashAttribute("successMessage", "Preference added");
 
-        String message = employeePreferencesService.savePreferences(employeePreferencesModel);// save preferencji
+        String message = employeePreferencesService.savePreferences(employeePreferencesModel);
         redirectAttributes.addFlashAttribute("generalMessage", message);
 
 

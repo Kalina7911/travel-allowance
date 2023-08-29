@@ -47,7 +47,7 @@ public class ValidationService {
 
     public void validateUser(Optional<User> user) {
         if(user.isEmpty()){
-          throw new EntityNotFoundException("User not exists");
+          throw new EntityNotFoundException("User not exist");
         }
     }
 }
