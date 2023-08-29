@@ -178,11 +178,6 @@ form {
     width: 100%;
 }
 
-/* Stylowanie etykiety */
-/*label {
-    margin-bottom: 5px;
-}*/
-
 /* Stylowanie pola wprowadzania */
 input[type="text"],
 input[type="number"],
@@ -211,12 +206,10 @@ select {
     color: indianred;
 }
 
-/* Stylowanie paragrafów */
-/*p {
-    text-align: justify;
-    font-size: larger;
+.link {
+    color: rgba(255,183,0,0.7);
+}
 
-}*/
 
 
 
