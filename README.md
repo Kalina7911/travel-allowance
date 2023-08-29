@@ -7,6 +7,7 @@
 #### Opis:
 
 Projek służy do obliczania wysokości dodatku do popołudniowej zmiany zwanego Travel Allowance.
+>
 1.Strona głowna: Travel Allowance
 >Wyświetla informacje na temat dodatku travel allowance. Podane są też linki do stron Preferences i Rate of Allowance.
   
