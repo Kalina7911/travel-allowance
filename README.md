@@ -7,9 +7,21 @@
 #### Opis:
 
 Projek służy do obliczania wysokości dodatku do popołudniowej zmiany zwanego Travel Allowance.
-Użytkownik wybiera preferowaną zmianę AM lub PM dla każdego dnia pracjącego na kolejny miesiąc i zapisuje wybór. 
-Aplikacja oblicza dodatek Travel Allowance dla każdego użytkownika i na każdy miesiąc na podstawie ilości popołudniowych zmnian,
-które użytkownik wprowadził. 
+1.Strona głowna: Travel Allowance
+>Wyświetla informacje na temat dodatku travel allowance. Podane są też linki do stron Preferences i Rate of Allowance.
+  
+2.Strona: Preferences
+>Na tej stronie znajduje się kalendarz, który wyświetla tylko następny miesiąc. 
+>Użytkownik wybiera dni, w których chce pracować danego miesiąca. Praca odbywa się w systemie 24/7.
+>Użytkownik każdego miesiąca może zaznaczyć tylko określoną liczbę dni. Informacja zn, ile dni jest wymaganych w danym miesiącu zajduje sie w tabeli Months. 
+>Aplikacja informuje użytkownika, czy wprowadził właściwą liczbę dni. 
+>Użytkownik jest identyfikowany za pomocą indeksu. Obecnie dostępne indeksy w bazie danych to 111, 112, 113.
+>Po wprowadzeniu indeksu, użytkownik zapisuje dany do bazy danych. 
+  
+3.Strona: Rate of Allowance 
+>Użytkownik wpisuje swój index i wybiera miesiąc.
+>Po przyciśnięciu: Calculate, aplikacja wyświetla informacje o wysokości dodatku travel allowance za wybrany miesiąc.
+>Użytkownik otrzymuje również informację o ilości zmian PM/popołudniowych w danym miesiącu, które są podstawą do wyliczania travel allowance. 
 
 
 Zainicjalizowane dane wyjściowe
