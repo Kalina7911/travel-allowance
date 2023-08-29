@@ -17,6 +17,10 @@ Indeks należy wpisac w pole indeksu, żeby zapisać dni pracujące i wybrane zm
 dodatku Travel Allowance. 
 
 
+![image](https://github.com/Kalina7911/travel-allowance/assets/115398298/cb02ed1f-ce4c-4452-a5a3-e6afd4e6a9a2)
+
+
+
 #### Stos technologiczny:
 - Java
 - Maven
