@@ -14,7 +14,8 @@ Projek służy do obliczania wysokości dodatku do popołudniowej zmiany zwanego
 2.Strona: Preferences
 >Na tej stronie znajduje się kalendarz, który wyświetla tylko następny miesiąc. 
 >Użytkownik wybiera dni, w których chce pracować danego miesiąca. Praca odbywa się w systemie 24/7.
->Użytkownik każdego miesiąca może zaznaczyć tylko określoną liczbę dni. Informacja zn, ile dni jest wymaganych w danym miesiącu zajduje sie w tabeli Months. 
+>Użytkownik każdego miesiąca może zaznaczyć tylko określoną liczbę dni. Informacja zn, ile dni jest wymaganych
+> w danym miesiącu zajduje sie w tabeli Months. 
 >Aplikacja informuje użytkownika, czy wprowadził właściwą liczbę dni. 
 >Użytkownik jest identyfikowany za pomocą indeksu. Obecnie dostępne indeksy w bazie danych to 111, 112, 113.
 >Po wprowadzeniu indeksu, użytkownik zapisuje dany do bazy danych. 
