@@ -18,7 +18,7 @@ Projek służy do obliczania wysokości dodatku do popołudniowej zmiany zwanego
 > w danym miesiącu zajduje sie w tabeli Months. 
 >Aplikacja informuje użytkownika, czy wprowadził właściwą liczbę dni. 
 >Użytkownik jest identyfikowany za pomocą indeksu. Obecnie dostępne indeksy w bazie danych to 111, 112, 113.
->Po wprowadzeniu indeksu, użytkownik zapisuje dany do bazy danych. 
+>Po wprowadzeniu indeksu, użytkownik zapisuje swoje preferencje do bazy danych. 
   
 3.Strona: Rate of Allowance 
 >Użytkownik wpisuje swój index i wybiera miesiąc.
