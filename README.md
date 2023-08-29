@@ -11,13 +11,17 @@ Użytkownik wybiera preferowaną zmianę AM lub PM dla każdego dnia pracjącego
 Aplikacja oblicza dodatek Travel Allowance dla każdego użytkownika i na każdy miesiąc na podstawie ilości popołudniowych zmnian,
 które użytkownik wprowadził. 
 
-#### Obsługa 
-W bazie danych jest zapisanych 3 użytkowników z następującymi indeksami: 111, 112, 113. 
-Indeks należy wpisac w pole indeksu, żeby zapisać dni pracujące i wybrane zmiany (AM lub PM) oraz żeby wyświetlić wartość 
-dodatku Travel Allowance. 
+
+Zainicjalizowane dane wyjściowe
+1. uzupełniona tabela Months: 12 miesięcy + liczba dni pracujących dla każdego miesiąca
 
 
 ![image](https://github.com/Kalina7911/travel-allowance/assets/115398298/cb02ed1f-ce4c-4452-a5a3-e6afd4e6a9a2)
+
+2. tabela Users uzupełniona 3 użytkownikami z indeksami 111, 112, 113
+
+![image](https://github.com/Kalina7911/travel-allowance/assets/115398298/84f980bf-660b-417d-a85d-e411bb652046)
+
 
 
 
@@ -30,15 +34,10 @@ dodatku Travel Allowance.
 - Railway.app
 - HTML
 - CSS
-- pikaday.min.js
-- moment.min.js
-- moment-timezone-with-data.min.js
+- Pikaday.js
+- Moment.js
 
 ## Uruchownienie 
+Proszę przejść na link https://travel-allowance.up.railway.app/
 
-prosta intstrukcja obsługi 
-wskazówki jak uruchomic lub załadować dane testowe
-
-Czy projekt ma minimalne wymagania sprzętowe/Biblioteki i wersje
-Dla strony www / aplikacji to może być instrukcja ustawienia lokalnego środowiska lub link do GitHub pages czy zdeployowanej aplikacji na Heroku. Czy potrzebne są dane wejściowe i jeśli tak, to w jakim formacie.
 
