@@ -50,7 +50,7 @@ Na stronie Preferences znajdują się 3 pola do wprowadzania danych: **Select Da
  
    *Aktywny jest zawsze tylko kolejny miesiąc, ponieważ aplikacja służy do wpisywania preferencji użytkownika*
  
-   *(wybór dni pracy i zmnian: poranna AM lub popołudniowa PM) tylko na kolejny miesiąc* 
+   *(to znaczy wybranych dni pracy i zmnian: poranna AM lub popołudniowa PM) tylko na kolejny miesiąc* 
 
 
 *  Użytkownik zaznacza 1 dzień , w którym chce pracować w danym miesiącu.
@@ -65,7 +65,7 @@ Na stronie Preferences znajdują się 3 pola do wprowadzania danych: **Select Da
 
      *Każdy użytkownik musi znać swoj index, żeby zachować zaznaczone preferencje (dzien i zmiana), a następnie wyświetlić*
 
-     *informacje nt. Travel Allowance na stronie Rate of Allowance.*-|
+     *informacje nt. Travel Allowance na stronie Rate of Allowance.*
    
 >Użytkownik każdego miesiąca może zaznaczyć tylko określoną liczbę dni. Informacja, ile dni jest wymaganych
 > w danym miesiącu zajduje sie w tabeli Months w bazie danych.
