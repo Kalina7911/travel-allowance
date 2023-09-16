@@ -9,15 +9,14 @@
 Projek służy do obliczania wysokości dodatku do popołudniowej zmiany zwanego Travel Allowance.
 
 
-Aplikacja składa się z 3 widoków: Travel Allowance, Preferences i Rate of Allowance.     
-
+Aplikacja składa się z 3 widoków: Travel Allowance, Preferences i Rate of Allowance.
 
 Widok Travel Allowance wyświetla informacje nt. dodatku zwanego Travel Allowance. 
 
-
 Widok Preferences służy do wprowadzania przez użytkowniaka 2 informacji/preferencji:
->1. w jakie dni chce pracować w następnym miesiącu
->2. oraz czy chce danego dnia pracować na zmianę poranną AM czy popołudniową PM.
+
+1. w jakie dni chce pracować w następnym miesiącu
+2. oraz czy chce danego dnia pracować na zmianę poranną AM czy popołudniową PM.
 
 Informacje te zapisywane są w bazie danych i służą do obliczania wysokości dodatku za popłudniową
 
