@@ -16,7 +16,8 @@ angielskim, dlatego wszystkie instrukcje w aplikacji są wyłącznie w tym języ
 <br>
 
 Aplikacja składa się z 3 widoków: Travel Allowance, Preferences i Rate of Allowance.
-
+<br>
+<br>
 Widok **Travel Allowance** wyświetla informacje nt. dodatku zwanego Travel Allowance. 
 
 Widok **Preferences** służy do wprowadzania przez użytkowniaka 2 informacji/preferencji:
