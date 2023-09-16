@@ -29,7 +29,7 @@ Informacje te zapisywane są w bazie danych i służą do obliczania wysokości 
 zmianę czyli Travel Allowance. 
 <br>
 <br>
-Widok  **Rate of Allowance** wyświetla 2 informacje :
+Widok  **Rate of Allowance** wyświetla 2 informacje dla danego użytkowika :
 
 
 1.  wysokość dodatku do popołudniowych zmian/Travel Allowance w danym miesiącu
