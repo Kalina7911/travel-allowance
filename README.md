@@ -22,10 +22,13 @@ Informacje te zapisywane są w bazie danych i służą do obliczania wysokości 
 
 zmianę czyli Travel Allowance. 
 
-Widok  Rate of Allowance wyświetla 2 informację : liczba dni na popołudniową zmianę/ PM danego miesiąca i wysokość dodatku do popołudniowych zmian/Travel Allowance
-w danym miesiącu
+Widok  Rate of Allowance wyświetla 2 informacje :
 
->
+1.liczba dni na popołudniową zmianę/ PM danego miesiąca 
+
+2.wysokość dodatku do popołudniowych zmian/Travel Allowance w danym miesiącu
+
+
 1.Strona głowna: Travel Allowance
 >Wyświetla informacje na temat dodatku zwanego travel allowance.
 >Aplikacja jest wyłącznie w języku angielskim ze wzgędu na użytkowników, którzy są pracownikami międzynarodowej firmy,
