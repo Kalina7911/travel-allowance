@@ -7,15 +7,43 @@
 #### Opis:
 
 Projek służy do obliczania wysokości dodatku do popołudniowej zmiany zwanego Travel Allowance.
+>Aplikacja składa się z 3 widoków: Travel Allowance, Preferences i Rate of Allowance. 
+>Widok Travel Allowance wyświetla informacje nt. dodatku zwanego Travel Allowance. 
+>Widok Preferences służy do wprowadzania przez użytkowniaka 2 informacji/preferencji:
+>1. w jakie dni chce pracować w następnym miesiącu
+>2. oraz czy chce danego dnia pracować na zmianę poranną AM czy popołudniową PM.
+> Informacje te zapisywane są w bazie danych i służą do obliczania wysokości dodatku za popłudniową
+>zmianę czyli Travel Allowance. 
+>Informacja o liczbie dni na popołudniową zmianę/ PM i wysokość dodatku za te zmiany/Travel Allowance
+> w danym miesiącu wyświetlana jest w widoku  Rate of Allowance. 
+
 >
 1.Strona głowna: Travel Allowance
->Wyświetla informacje na temat dodatku travel allowance. Podane są też linki do stron Preferences i Rate of Allowance.
+>Wyświetla informacje na temat dodatku zwanego travel allowance.
+>Aplikacja jest wyłącznie w języku angielskim ze wzgędu na użytkowników, którzy są pracownikami międzynarodowej firmy,
+>gdzie komunikacja odbywa się tylko po angielsku.
+>Podane są też linki do stron Preferences i Rate of Allowance.
   
 2.Strona: Preferences
->Na tej stronie znajduje się kalendarz, który wyświetla tylko następny miesiąc. 
+>Select Date: po kliknięciu na ten box pokazuje się kalendarz z nieaktywnym bieżącym miesiącem.
+>Należy kliknąć na strzałkę w górnym, prawym rogu, żeby przejsć do kolejnego miesiąca.
+>Aktywne są tylko kolejne miesiące, ponieważ aplikacja służy do wpisywania preferencji użytkownika 
 >Użytkownik wybiera dni, w których chce pracować danego miesiąca. Praca odbywa się w systemie 24/7.
 >Użytkownik każdego miesiąca może zaznaczyć tylko określoną liczbę dni. Informacja, ile dni jest wymaganych
-> w danym miesiącu zajduje sie w tabeli Months. 
+> w danym miesiącu zajduje sie w tabeli Months w bazie danych.
+>Zaznaczanie preferencji:
+>1. po wyswietleniu kalendarza z następnym miesiącem,użytkownik zaznacza wybrany dzień
+>2. następnie w Select Shift wybiera zmianę ranną, czyli AM lub popołudniową PM
+>3. następnie w Enter Your Index wpisuje numer, pod którym widnieje w bazie danych.
+>   Każdy użytkownik posiada unikatowy numer w bazie danych, zwany indeksem/Index.
+>   Wymagane jest , żeby użytkownik znał swój numer/Index w bazie danych.
+>   Obecnie w bazie danych jest 3 użytkowników z numerami/Indexami 111, 112, 113.
+>   Oznacza to , że po wybraniu dnia i zmiany, należy wprowadzić jeden z 3 powyższych numerów/ Index,
+>   aby zapisać Preferencje w bazie danych.
+>
+>   
+>   
+>5. 
 >Aplikacja informuje użytkownika, czy wprowadził właściwą liczbę dni. 
 >Użytkownik jest identyfikowany za pomocą indeksu. Obecnie dostępne indeksy w bazie danych to 111, 112, 113.
 >Po wprowadzeniu indeksu, użytkownik zapisuje swoje preferencje do bazy danych. 
