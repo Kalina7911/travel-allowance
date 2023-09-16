@@ -43,7 +43,7 @@ Widok  **Rate of Allowance** wyświetla 2 informacje dla danego użytkowika :
 #### Wprowadzanie danych na stronie Preferences
 <br>
 
-Na stronie Preferences znajdują się 3 pola do wprowadzania danych: **Select Date**, **Select Shift**, **Enter Your Index**.
+|-Na stronie Preferences znajdują się 3 pola do wprowadzania danych: **Select Date**, **Select Shift**, **Enter Your Index**.
 <br>
 *  Po kliknięciu na to pole **Select Date** pokazuje się kalendarz z nieaktywnym bieżącym miesiącem.
 
@@ -67,7 +67,7 @@ Na stronie Preferences znajdują się 3 pola do wprowadzania danych: **Select Da
 
 *Każdy użytkownik musi znać swoj index, żeby zachować zaznaczone preferencje (dzien i zmiana), a następnie wyświetlić*
 
-*informacje nt. Travel Allowance na stronie Rate of Allowance.*
+*informacje nt. Travel Allowance na stronie Rate of Allowance.*-|
    
 >Użytkownik każdego miesiąca może zaznaczyć tylko określoną liczbę dni. Informacja, ile dni jest wymaganych
 > w danym miesiącu zajduje sie w tabeli Months w bazie danych.
