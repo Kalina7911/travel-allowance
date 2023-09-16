@@ -22,8 +22,8 @@ Widok **Travel Allowance** wyświetla informacje nt. dodatku zwanego Travel Allo
 
 Widok **Preferences** służy do wprowadzania przez użytkowniaka 2 informacji/preferencji:
 
-\1. w jakie dni chce pracować w następnym miesiącu
-\2. czy chce danego dnia pracować na zmianę poranną AM czy popołudniową PM.
+1. w jakie dni chce pracować w następnym miesiącu
+2. czy chce danego dnia pracować na zmianę poranną AM czy popołudniową PM.
 
 Informacje te zapisywane są w bazie danych i służą do obliczania wysokości dodatku za popłudniową \
 zmianę czyli Travel Allowance. 
@@ -32,8 +32,8 @@ zmianę czyli Travel Allowance.
 Widok  **Rate of Allowance** wyświetla 2 informacje :
 
 
-1.liczba dni na popołudniową zmianę/ PM danego miesiąca 
-2.wysokość dodatku do popołudniowych zmian/Travel Allowance w danym miesiącu
+1. liczba dni na popołudniową zmianę/ PM danego miesiąca 
+2. wysokość dodatku do popołudniowych zmian/Travel Allowance w danym miesiącu
 
   
 #### Wprowadzanie danych na stronie Preferences
