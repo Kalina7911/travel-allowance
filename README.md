@@ -13,14 +13,13 @@ Jest przeznaczona dla pracowników międzynarodowej firmy, gdzie obowiązuje kom
 angielskim, dlatego wszystkie instrukcje w aplikacji są wyłącznie w tym języku.
 <br>
 <br>
-
-Aplikacja składa się z 3 widoków: Travel Allowance, Preferences i Rate of Allowance.
 <br>
 
-Widok Travel Allowance wyświetla informacje nt. dodatku zwanego Travel Allowance. 
+Aplikacja składa się z 3 widoków: Travel Allowance, Preferences i Rate of Allowance.
+Widok **Travel Allowance** wyświetla informacje nt. dodatku zwanego Travel Allowance. 
 
 
-Widok Preferences służy do wprowadzania przez użytkowniaka 2 informacji/preferencji:
+Widok **Preferences** służy do wprowadzania przez użytkowniaka 2 informacji/preferencji:
 
 1. w jakie dni chce pracować w następnym miesiącu
 2. czy chce danego dnia pracować na zmianę poranną AM czy popołudniową PM.
@@ -29,7 +28,7 @@ Informacje te zapisywane są w bazie danych i służą do obliczania wysokości 
 
 zmianę czyli Travel Allowance. 
 
-Widok  Rate of Allowance wyświetla 2 informacje :
+Widok  **Rate of Allowance** wyświetla 2 informacje :
 
 1.liczba dni na popołudniową zmianę/ PM danego miesiąca 
 
