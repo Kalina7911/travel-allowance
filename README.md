@@ -3,8 +3,9 @@
 ### Imię i nazwisko: Alina Kotnarowska
 
 ### Nazwa projektu: Travel Allowance
+<br>
 
-#### Opis:
+### Opis:
 
 Projek służy do obliczania wysokości dodatku do popołudniowej zmiany zwanego Travel Allowance. 
 
@@ -36,11 +37,9 @@ Widok  **Rate of Allowance** wyświetla 2 informacje dla danego użytkowika :
 2.  liczba dni na popołudniową zmianę/ PM danego miesiąca
    <br>
    <br>
-   <br>
-
 
   
-#### Wprowadzanie danych na stronie Preferences
+### Wprowadzanie danych na stronie Preferences
 <br>
 
 Na stronie Preferences znajdują się 3 pola do wprowadzania danych: **Select Date**, **Select Shift**, **Enter Your Index**.
@@ -63,11 +62,11 @@ Na stronie Preferences znajdują się 3 pola do wprowadzania danych: **Select Da
  *  Następnie użytkownik przechodzi do pola **Enter Your Index** i wpisuje swój Index
 
    
- *Index to unikatowy numer użytkownika w bazie danych. Za pomocą tego numeru (Index) użytkownik jest identyfikowany.*
+   *Index to unikatowy numer użytkownika w bazie danych. Za pomocą tego numeru (Index) użytkownik jest identyfikowany.*
 
-*Każdy użytkownik musi znać swoj index, żeby zachować zaznaczone preferencje (dzien i zmiana), a następnie wyświetlić*
+   *Każdy użytkownik musi znać swoj index, żeby zachować zaznaczone preferencje (dzien i zmiana), a następnie wyświetlić*
 
-*informacje nt. Travel Allowance na stronie Rate of Allowance.*-|
+   *informacje nt. Travel Allowance na stronie Rate of Allowance.*-|
    
 >Użytkownik każdego miesiąca może zaznaczyć tylko określoną liczbę dni. Informacja, ile dni jest wymaganych
 > w danym miesiącu zajduje sie w tabeli Months w bazie danych.
