@@ -44,7 +44,7 @@ Widok  **Rate of Allowance** wyświetla 2 informacje dla danego użytkowika :
 
 Na stronie Preferences znajdują się 3 pola do wprowadzania danych: **Select Date**, **Select Shift**, **Enter Your Index**.
 <br>
-*  Po kliknięciu na to pole **Select Date** pokazuje się kalendarz z nieaktywnym bieżącym miesiącem.
+1.  Po kliknięciu na to pole **Select Date** pokazuje się kalendarz z nieaktywnym bieżącym miesiącem.
 
     Należy kliknąć na strzałkę w górnym, prawym rogu, żeby przejsć do kolejnego miesiąca.
  
@@ -53,19 +53,31 @@ Na stronie Preferences znajdują się 3 pola do wprowadzania danych: **Select Da
    *(to znaczy wybranych dni pracy i zmnian: poranna AM lub popołudniowa PM) tylko na kolejny miesiąc* 
 
 
-*  Użytkownik zaznacza 1 dzień , w którym chce pracować w danym miesiącu.
+2.   Użytkownik zaznacza 1 dzień , w którym chce pracować w danym miesiącu.
 
-   *Praca odbywa się w systemie 24/7, więc każdy dzień może być wybrany łącznie z sobotami i niedzielami.*
+    *Praca odbywa się w systemie 24/7, więc każdy dzień może być wybrany łącznie z sobotami i niedzielami.*
 
- *  Następnie użytkownik przechodzi do pola **Select Shift** i wybiera albo zmianę poranną czyli AM, albo zmianę popołudniową czyli PM.
+3.  Następnie użytkownik przechodzi do pola **Select Shift** i wybiera albo zmianę poranną czyli AM, albo zmianę popołudniową czyli PM.
    
- *  Następnie użytkownik przechodzi do pola **Enter Your Index** i wpisuje swój Index
+4.  Następnie użytkownik przechodzi do pola **Enter Your Index** i wpisuje swój Index
 
      *Index to unikatowy numer użytkownika w bazie danych. Za pomocą tego numeru (Index) użytkownik jest identyfikowany.*
 
      *Każdy użytkownik musi znać swoj index, żeby zachować zaznaczone preferencje (dzien i zmiana), a następnie wyświetlić*
 
      *informacje nt. Travel Allowance na stronie Rate of Allowance.*
+5.  Następny krok to zachowanie wybranych danych poprzez naciśnięcie przycisku SAVE
+
+   Jeżeli pola Sekect Date, Select Shift , Enter Your Index zostały poprawnie zaznaczone, aplikacja wyświetla 2 informacje:
+
+  1.    wybór został zapisany: Preference Added
+  2.    ile jeszcze dni należy wybrać, np. Missing working days 20.
+
+       *Każdy miesiąc ma inną liczbę dni pracujących (working days). Liczba dni pracujących jest ustawiona w tabeli "months". 
+
+Użytkownik powtarza kroki od 1 do 5 tyle razy, ile jest dni pracujących w danym miesiącu. 
+       
+   
    
 >Użytkownik każdego miesiąca może zaznaczyć tylko określoną liczbę dni. Informacja, ile dni jest wymaganych
 > w danym miesiącu zajduje sie w tabeli Months w bazie danych.
