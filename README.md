@@ -25,7 +25,7 @@ Widok **Preferences** służy do wprowadzania przez użytkowniaka 2 informacji/p
 1. w jakie dni chce pracować w następnym miesiącu
 2. czy chce danego dnia pracować na zmianę poranną AM czy popołudniową PM.
 
-Informacje te zapisywane są w bazie danych i służą do obliczania wysokości dodatku za popłudniową \
+Informacje te zapisywane są w bazie danych i służą do obliczania wysokości dodatku za popopłudniową \
 zmianę czyli Travel Allowance. 
 <br>
 <br>
@@ -38,8 +38,12 @@ Widok  **Rate of Allowance** wyświetla 2 informacje dla danego użytkowika :
 
   
 #### Wprowadzanie danych na stronie Preferences
+
+Na stronie Preferences znajdują się 3 pola do wprowadzania danych: **Select Date**, **Select Shift**, **Enter Your Index**.
 <br>
->Select Date: po kliknięciu na ten box pokazuje się kalendarz z nieaktywnym bieżącym miesiącem.
+<br>
+<br>
+Select Date: po kliknięciu na ten box pokazuje się kalendarz z nieaktywnym bieżącym miesiącem.
 >Należy kliknąć na strzałkę w górnym, prawym rogu, żeby przejsć do kolejnego miesiąca.
 >Aktywne są tylko kolejne miesiące, ponieważ aplikacja służy do wpisywania preferencji użytkownika 
 >Użytkownik wybiera dni, w których chce pracować danego miesiąca. Praca odbywa się w systemie 24/7.
