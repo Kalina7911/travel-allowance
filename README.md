@@ -16,7 +16,7 @@ Widok Travel Allowance wyświetla informacje nt. dodatku zwanego Travel Allowanc
 Widok Preferences służy do wprowadzania przez użytkowniaka 2 informacji/preferencji:
 
 1. w jakie dni chce pracować w następnym miesiącu
-2. oraz czy chce danego dnia pracować na zmianę poranną AM czy popołudniową PM.
+2. czy chce danego dnia pracować na zmianę poranną AM czy popołudniową PM.
 
 Informacje te zapisywane są w bazie danych i służą do obliczania wysokości dodatku za popłudniową
 
