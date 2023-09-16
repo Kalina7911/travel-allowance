@@ -8,7 +8,7 @@
 
 Projek służy do obliczania wysokości dodatku do popołudniowej zmiany zwanego Travel Allowance. \Jest przeznaczona dla pracowników międzynarodowej firmy, gdzie obowiązuje komunikacja w języku 
 
-angielskim, dlatego wszystkie instrukcje w aplikacji są wyłącznie w tym języku.   
+angielskim, dlatego wszystkie instrukcje w aplikacji są wyłącznie w tym języku.\\   
 
 Aplikacja składa się z 3 widoków: Travel Allowance, Preferences i Rate of Allowance.
 
