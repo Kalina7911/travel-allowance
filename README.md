@@ -16,9 +16,10 @@ angielskim, dlatego wszystkie instrukcje w aplikacji są wyłącznie w tym języ
 <br>
 
 Aplikacja składa się z 3 widoków: Travel Allowance, Preferences i Rate of Allowance.
+
+
 Widok **Travel Allowance** wyświetla informacje nt. dodatku zwanego Travel Allowance. 
-
-
+<br>
 Widok **Preferences** służy do wprowadzania przez użytkowniaka 2 informacji/preferencji:
 
 1. w jakie dni chce pracować w następnym miesiącu
@@ -27,6 +28,7 @@ Widok **Preferences** służy do wprowadzania przez użytkowniaka 2 informacji/p
 Informacje te zapisywane są w bazie danych i służą do obliczania wysokości dodatku za popłudniową
 
 zmianę czyli Travel Allowance. 
+<br>
 
 Widok  **Rate of Allowance** wyświetla 2 informacje :
 
