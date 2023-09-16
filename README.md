@@ -26,8 +26,8 @@ Widok **Preferences** służy do wprowadzania przez użytkowniaka 2 informacji/p
 2. czy chce danego dnia pracować na zmianę poranną AM czy popołudniową PM.
 
 Informacje te zapisywane są w bazie danych i służą do obliczania wysokości dodatku za popłudniową
-
 zmianę czyli Travel Allowance. 
+<br>
 <br>
 <br>
 Widok  **Rate of Allowance** wyświetla 2 informacje :
