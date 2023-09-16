@@ -13,12 +13,19 @@ Aplikacja składa się z 3 widoków: Travel Allowance, Preferences i Rate of All
 
 
 Widok Travel Allowance wyświetla informacje nt. dodatku zwanego Travel Allowance. 
->Widok Preferences służy do wprowadzania przez użytkowniaka 2 informacji/preferencji:
+
+
+Widok Preferences służy do wprowadzania przez użytkowniaka 2 informacji/preferencji:
 >1. w jakie dni chce pracować w następnym miesiącu
 >2. oraz czy chce danego dnia pracować na zmianę poranną AM czy popołudniową PM.
-> Informacje te zapisywane są w bazie danych i służą do obliczania wysokości dodatku za popłudniową
->zmianę czyli Travel Allowance. 
->Informacja o liczbie dni na popołudniową zmianę/ PM i wysokość dodatku za te zmiany/Travel Allowance
+
+Informacje te zapisywane są w bazie danych i służą do obliczania wysokości dodatku za popłudniową
+
+
+zmianę czyli Travel Allowance. 
+
+
+Informacja o liczbie dni na popołudniową zmianę/ PM i wysokość dodatku za te zmiany/Travel Allowance
 > w danym miesiącu wyświetlana jest w widoku  Rate of Allowance. 
 
 >
