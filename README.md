@@ -46,11 +46,11 @@ Na stronie Preferences znajdują się 3 pola do wprowadzania danych: **Select Da
 <br>
 *  Po kliknięciu na to pole **Select Date** pokazuje się kalendarz z nieaktywnym bieżącym miesiącem.
 
-  |= Należy kliknąć na strzałkę w górnym, prawym rogu, żeby przejsć do kolejnego miesiąca.
+    Należy kliknąć na strzałkę w górnym, prawym rogu, żeby przejsć do kolejnego miesiąca.
  
    *Aktywny jest zawsze tylko kolejny miesiąc, ponieważ aplikacja służy do wpisywania preferencji użytkownika*
  
-   *(wybór dni pracy i zmnian: poranna AM lub popołudniowa PM) tylko na kolejny miesiąc*=| 
+   *(wybór dni pracy i zmnian: poranna AM lub popołudniowa PM) tylko na kolejny miesiąc* 
 
 
 *  Użytkownik zaznacza 1 dzień , w którym chce pracować w danym miesiącu.
@@ -61,12 +61,11 @@ Na stronie Preferences znajdują się 3 pola do wprowadzania danych: **Select Da
    
  *  Następnie użytkownik przechodzi do pola **Enter Your Index** i wpisuje swój Index
 
-   
-   *Index to unikatowy numer użytkownika w bazie danych. Za pomocą tego numeru (Index) użytkownik jest identyfikowany.*
+     *Index to unikatowy numer użytkownika w bazie danych. Za pomocą tego numeru (Index) użytkownik jest identyfikowany.*
 
-   *Każdy użytkownik musi znać swoj index, żeby zachować zaznaczone preferencje (dzien i zmiana), a następnie wyświetlić*
+     *Każdy użytkownik musi znać swoj index, żeby zachować zaznaczone preferencje (dzien i zmiana), a następnie wyświetlić*
 
-   *informacje nt. Travel Allowance na stronie Rate of Allowance.*-|
+     *informacje nt. Travel Allowance na stronie Rate of Allowance.*-|
    
 >Użytkownik każdego miesiąca może zaznaczyć tylko określoną liczbę dni. Informacja, ile dni jest wymaganych
 > w danym miesiącu zajduje sie w tabeli Months w bazie danych.
