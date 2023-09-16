@@ -6,6 +6,7 @@
 <br>
 
 ### Opis
+<br>
 
 Projek służy do obliczania wysokości dodatku do popołudniowej zmiany zwanego Travel Allowance. 
 
@@ -19,22 +20,18 @@ angielskim, dlatego wszystkie instrukcje w aplikacji są wyłącznie w tym języ
 Aplikacja składa się z 3 widoków: **Travel Allowance**, **Preferences** i **Rate of Allowance**.
 <br>
 <br>
-Widok **Travel Allowance** wyświetla informacje nt. dodatku zwanego Travel Allowance. 
+*  Widok **Travel Allowance** wyświetla informacje nt. dodatku zwanego Travel Allowance. 
 
-Widok **Preferences** służy do wprowadzania przez użytkownika 2 informacji/preferencji:
+*  Widok **Preferences** służy do wprowadzania przez użytkownika 2 informacji/preferencji:
+     1.  w jakie dni chce pracować w następnym miesiącu
+     2.  czy chce danego dnia pracować na zmianę poranną AM czy popołudniową PM.
 
-1. w jakie dni chce pracować w następnym miesiącu
-2. czy chce danego dnia pracować na zmianę poranną AM czy popołudniową PM.
-
-Informacje te zapisywane są w bazie danych i służą do obliczania wysokości dodatku za popołudniową \
-zmianę czyli Travel Allowance. 
-<br>
-<br>
-Widok  **Rate of Allowance** wyświetla 2 informacje dla danego użytkowika :
-
-
-1.  wysokość dodatku do popołudniowych zmian/Travel Allowance w danym miesiącu
-2.  liczba dni na popołudniową zmianę/ PM danego miesiąca
+   Informacje te zapisywane są w bazie danych i służą do obliczania wysokości dodatku za popołudniową \
+   zmianę czyli Travel Allowance.
+   
+*   Widok  **Rate of Allowance** wyświetla 2 informacje dla danego użytkowika :
+      1.  wysokość dodatku do popołudniowych zmian/Travel Allowance w danym miesiącu
+      2.  liczba dni na popołudniową zmianę/ PM danego miesiąca
    <br>
    <br>
 
@@ -43,6 +40,7 @@ Widok  **Rate of Allowance** wyświetla 2 informacje dla danego użytkowika :
 <br>
 
 Na stronie Preferences znajdują się 3 pola do wprowadzania danych: **Select Date**, **Select Shift**, **Enter Your Index**.
+<br>
 <br>
 1.  Po kliknięciu na to pole **Select Date** pokazuje się kalendarz z nieaktywnym bieżącym miesiącem.
 
@@ -55,7 +53,7 @@ Na stronie Preferences znajdują się 3 pola do wprowadzania danych: **Select Da
 
 2.   Użytkownik zaznacza 1 dzień , w którym chce pracować w danym miesiącu.
 
-  *Praca odbywa się w systemie 24/7, więc każdy dzień może być wybrany łącznie z sobotami i niedzielami.*
+     *Praca odbywa się w systemie 24/7, więc każdy dzień może być wybrany łącznie z sobotami i niedzielami.*
 
 3.  Następnie użytkownik przechodzi do pola **Select Shift** i wybiera albo zmianę poranną czyli AM, albo zmianę popołudniową czyli PM.
    
@@ -63,10 +61,14 @@ Na stronie Preferences znajdują się 3 pola do wprowadzania danych: **Select Da
 
      *Index to unikatowy numer użytkownika w bazie danych. Za pomocą tego numeru (Index) użytkownik jest identyfikowany.*
 
-     *Każdy użytkownik musi znać swoj index, żeby zachować zaznaczone preferencje (dzien i zmiana), a następnie wyświetlić*
+     *Każdy użytkownik musi znać swój index, żeby zachować zaznaczone preferencje (dzień i zmiana) i wyświetlić*
 
      *informacje nt. Travel Allowance na stronie Rate of Allowance.*
 
+      *Obecnie w bazie danych (tabela "users") jest 3 użytkowników do testowania aplikacji z następującymi indeksami (Index): 111, 112, 113,*
+
+       *Wybrany index (111, 112 lub 113) należy wpisać w polu **Enter Your Index**.*
+   
     
 6.  Następny krok to zachowanie wybranych danych poprzez naciśnięcie przycisku SAVE
    <br>
@@ -78,10 +80,10 @@ Na stronie Preferences znajdują się 3 pola do wprowadzania danych: **Select Da
   2.    ile jeszcze dni należy wybrać, np. Missing working days 20.
 
         *Każdy miesiąc ma inną liczbę dni pracujących (working days). Liczba dni pracujących jest ustawiona w tabeli "months".*
+    <br>
+    <br>
 
-    
-
-Użytkownik powtarza kroki od 1 do 5 tyle razy, ile jest dni pracujących w danym miesiącu. 
+**Użytkownik powtarza kroki od 1 do 5 tyle razy, ile jest dni pracujących w danym miesiącu.**
        
    
    
