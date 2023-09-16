@@ -33,28 +33,42 @@ Widok  **Rate of Allowance** wyświetla 2 informacje dla danego użytkowika :
 
 
 1.  wysokość dodatku do popołudniowych zmian/Travel Allowance w danym miesiącu
-2.  liczba dni na popołudniową zmianę/ PM danego miesiąca 
+2.  liczba dni na popołudniową zmianę/ PM danego miesiąca
+   <br>
+   <br>
+   <br>
 
 
   
 #### Wprowadzanie danych na stronie Preferences
+<br>
 
 Na stronie Preferences znajdują się 3 pola do wprowadzania danych: **Select Date**, **Select Shift**, **Enter Your Index**.
 <br>
-<br>
-<br>
 *  Po kliknięciu na to pole **Select Date** pokazuje się kalendarz z nieaktywnym bieżącym miesiącem.
 
-
-*  Należy kliknąć na strzałkę w górnym, prawym rogu, żeby przejsć do kolejnego miesiąca.
-*Aktywny jest zawsze tylko kolejny miesiąc, ponieważ aplikacja służy do wpisywania preferencji użytkownika 
-(wybór dni pracy i zmnian: poranna AM lub popołudniowa PM) tylko na kolejny miesiąc*
+ Należy kliknąć na strzałkę w górnym, prawym rogu, żeby przejsć do kolejnego miesiąca.
+ 
+ *Aktywny jest zawsze tylko kolejny miesiąc, ponieważ aplikacja służy do wpisywania preferencji użytkownika*
+ 
+ *(wybór dni pracy i zmnian: poranna AM lub popołudniowa PM) tylko na kolejny miesiąc*
 
 
 *  Użytkownik zaznacza 1 dzień , w którym chce pracować w danym miesiącu.
+
    *Praca odbywa się w systemie 24/7, więc każdy dzień może być wybrany łącznie z sobotami i niedzielami.*
 
-   Następnie użytkownik przechodzi do pola **Select Shift** i wybiera albo zmianę poranną czyli AM, albo zmianę popołudniową czyli PM.
+ *  Następnie użytkownik przechodzi do pola **Select Shift** i wybiera albo zmianę poranną czyli AM, albo zmianę popołudniową czyli PM.
+   
+ *  Następnie użytkownik przechodzi do pola **Enter Your Index** i wpisuje swój Index
+
+   
+ *Index to unikatowy numer użytkownika w bazie danych. Za pomocą tego numeru (Index) użytkownik jest identyfikowany.*
+
+*Każdy użytkownik musi znać swoj index, żeby zachować zaznaczone preferencje (dzien i zmiana), a następnie wyświetlić*
+
+*informacje nt. Travel Allowance na stronie Rate of Allowance.*
+   
 >Użytkownik każdego miesiąca może zaznaczyć tylko określoną liczbę dni. Informacja, ile dni jest wymaganych
 > w danym miesiącu zajduje sie w tabeli Months w bazie danych.
 >Zaznaczanie preferencji:
