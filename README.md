@@ -48,9 +48,9 @@ Na stronie Preferences znajdują się 3 pola do wprowadzania danych: **Select Da
 
     Należy kliknąć na strzałkę w górnym, prawym rogu, żeby przejsć do kolejnego miesiąca.
  
-   *Aktywny jest zawsze tylko kolejny miesiąc, ponieważ aplikacja służy do wpisywania preferencji użytkownika*
+     *Aktywny jest zawsze tylko kolejny miesiąc, ponieważ aplikacja służy do wpisywania preferencji użytkownika*
  
-   *(to znaczy wybranych dni pracy i zmnian: poranna AM lub popołudniowa PM) tylko na kolejny miesiąc* 
+      *(to znaczy wybranych dni pracy i zmnian: poranna AM lub popołudniowa PM) tylko na kolejny miesiąc* 
 
 
 2.   Użytkownik zaznacza 1 dzień , w którym chce pracować w danym miesiącu.
@@ -66,6 +66,8 @@ Na stronie Preferences znajdują się 3 pola do wprowadzania danych: **Select Da
 
      *informacje nt. Travel Allowance na stronie Rate of Allowance.*
 5.  Następny krok to zachowanie wybranych danych poprzez naciśnięcie przycisku SAVE
+   <br>
+   
 
    Jeżeli pola Sekect Date, Select Shift , Enter Your Index zostały poprawnie zaznaczone, aplikacja wyświetla 2 informacje:
 
