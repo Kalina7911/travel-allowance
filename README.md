@@ -6,9 +6,7 @@
 
 #### Opis:
 
-Projek służy do obliczania wysokości dodatku do popołudniowej zmiany zwanego Travel Allowance. 
-
-Jest przeznaczona dla pracowników międzynarodowej firmy, gdzie obowiązuje komunikacja w języku 
+Projek służy do obliczania wysokości dodatku do popołudniowej zmiany zwanego Travel Allowance. \Jest przeznaczona dla pracowników międzynarodowej firmy, gdzie obowiązuje komunikacja w języku 
 
 angielskim, dlatego wszystkie instrukcje w aplikacji są wyłącznie w tym języku.   
 
