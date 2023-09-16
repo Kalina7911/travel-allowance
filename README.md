@@ -47,11 +47,11 @@ Widok  **Rate of Allowance** wyświetla 2 informacje dla danego użytkowika :
 <br>
 *  Po kliknięciu na to pole **Select Date** pokazuje się kalendarz z nieaktywnym bieżącym miesiącem.
 
- Należy kliknąć na strzałkę w górnym, prawym rogu, żeby przejsć do kolejnego miesiąca.
+   Należy kliknąć na strzałkę w górnym, prawym rogu, żeby przejsć do kolejnego miesiąca.
  
- *Aktywny jest zawsze tylko kolejny miesiąc, ponieważ aplikacja służy do wpisywania preferencji użytkownika*
+   *Aktywny jest zawsze tylko kolejny miesiąc, ponieważ aplikacja służy do wpisywania preferencji użytkownika*
  
- *(wybór dni pracy i zmnian: poranna AM lub popołudniowa PM) tylko na kolejny miesiąc*
+   *(wybór dni pracy i zmnian: poranna AM lub popołudniowa PM) tylko na kolejny miesiąc*
 
 
 *  Użytkownik zaznacza 1 dzień , w którym chce pracować w danym miesiącu.
