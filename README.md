@@ -13,6 +13,8 @@ Jest przeznaczona dla pracowników międzynarodowej firmy, gdzie obowiązuje kom
 angielskim, dlatego wszystkie instrukcje w aplikacji są wyłącznie w tym języku. 
 
 
+
+
 Aplikacja składa się z 3 widoków: Travel Allowance, Preferences i Rate of Allowance.
 
 Widok Travel Allowance wyświetla informacje nt. dodatku zwanego Travel Allowance. 
