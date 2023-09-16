@@ -20,12 +20,10 @@ Widok Preferences służy do wprowadzania przez użytkowniaka 2 informacji/prefe
 
 Informacje te zapisywane są w bazie danych i służą do obliczania wysokości dodatku za popłudniową
 
-
 zmianę czyli Travel Allowance. 
 
-
-Informacja o liczbie dni na popołudniową zmianę/ PM i wysokość dodatku za te zmiany/Travel Allowance
-> w danym miesiącu wyświetlana jest w widoku  Rate of Allowance. 
+Widok  Rate of Allowance wyświetla 2 informację : liczba dni na popołudniową zmianę/ PM danego miesiąca i wysokość dodatku do popołudniowych zmian/Travel Allowance
+w danym miesiącu
 
 >
 1.Strona głowna: Travel Allowance
