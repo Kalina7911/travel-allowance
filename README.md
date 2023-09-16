@@ -20,12 +20,12 @@ Aplikacja składa się z 3 widoków: **Travel Allowance**, **Preferences** i **R
 <br>
 Widok **Travel Allowance** wyświetla informacje nt. dodatku zwanego Travel Allowance. 
 
-Widok **Preferences** służy do wprowadzania przez użytkowniaka 2 informacji/preferencji:
+Widok **Preferences** służy do wprowadzania przez użytkownika 2 informacji/preferencji:
 
 1. w jakie dni chce pracować w następnym miesiącu
 2. czy chce danego dnia pracować na zmianę poranną AM czy popołudniową PM.
 
-Informacje te zapisywane są w bazie danych i służą do obliczania wysokości dodatku za popopłudniową \
+Informacje te zapisywane są w bazie danych i służą do obliczania wysokości dodatku za popołudniową \
 zmianę czyli Travel Allowance. 
 <br>
 <br>
@@ -43,10 +43,18 @@ Na stronie Preferences znajdują się 3 pola do wprowadzania danych: **Select Da
 <br>
 <br>
 <br>
-Select Date: po kliknięciu na ten box pokazuje się kalendarz z nieaktywnym bieżącym miesiącem.
->Należy kliknąć na strzałkę w górnym, prawym rogu, żeby przejsć do kolejnego miesiąca.
->Aktywne są tylko kolejne miesiące, ponieważ aplikacja służy do wpisywania preferencji użytkownika 
->Użytkownik wybiera dni, w których chce pracować danego miesiąca. Praca odbywa się w systemie 24/7.
+*  Po kliknięciu na to pole **Select Date** pokazuje się kalendarz z nieaktywnym bieżącym miesiącem.
+
+
+*  Należy kliknąć na strzałkę w górnym, prawym rogu, żeby przejsć do kolejnego miesiąca.
+*Aktywny jest zawsze tylko kolejny miesiąc, ponieważ aplikacja służy do wpisywania preferencji użytkownika 
+(wybór dni pracy i zmnian: poranna AM lub popołudniowa PM) tylko na kolejny miesiąc*
+
+
+*  Użytkownik zaznacza 1 dzień , w którym chce pracować w danym miesiącu.
+   *Praca odbywa się w systemie 24/7, więc każdy dzień może być wybrany łącznie z sobotami i niedzielami.*
+
+   Następnie użytkownik przechodzi do pola **Select Shift** i wybiera albo zmianę poranną czyli AM, albo zmianę popołudniową czyli PM.
 >Użytkownik każdego miesiąca może zaznaczyć tylko określoną liczbę dni. Informacja, ile dni jest wymaganych
 > w danym miesiącu zajduje sie w tabeli Months w bazie danych.
 >Zaznaczanie preferencji:
