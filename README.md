@@ -5,7 +5,7 @@
 ### Nazwa projektu: Travel Allowance
 <br>
 
-### Opis:
+### Opis
 
 Projek służy do obliczania wysokości dodatku do popołudniowej zmiany zwanego Travel Allowance. 
 
@@ -54,8 +54,7 @@ Na stronie Preferences znajdują się 3 pola do wprowadzania danych: **Select Da
 
 
 2.   Użytkownik zaznacza 1 dzień , w którym chce pracować w danym miesiącu.
-
-    *Praca odbywa się w systemie 24/7, więc każdy dzień może być wybrany łącznie z sobotami i niedzielami.*
+     *Praca odbywa się w systemie 24/7, więc każdy dzień może być wybrany łącznie z sobotami i niedzielami.*
 
 3.  Następnie użytkownik przechodzi do pola **Select Shift** i wybiera albo zmianę poranną czyli AM, albo zmianę popołudniową czyli PM.
    
@@ -73,7 +72,7 @@ Na stronie Preferences znajdują się 3 pola do wprowadzania danych: **Select Da
   1.    wybór został zapisany: Preference Added
   2.    ile jeszcze dni należy wybrać, np. Missing working days 20.
 
-       *Każdy miesiąc ma inną liczbę dni pracujących (working days). Liczba dni pracujących jest ustawiona w tabeli "months". 
+        *Każdy miesiąc ma inną liczbę dni pracujących (working days). Liczba dni pracujących jest ustawiona w tabeli "months".*
 
 Użytkownik powtarza kroki od 1 do 5 tyle razy, ile jest dni pracujących w danym miesiącu. 
        
