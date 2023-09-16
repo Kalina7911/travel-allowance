@@ -34,9 +34,12 @@ Widok  Rate of Allowance wyświetla 2 informacje :
 1.liczba dni na popołudniową zmianę/ PM danego miesiąca 
 
 2.wysokość dodatku do popołudniowych zmian/Travel Allowance w danym miesiącu
+<br>
+<br>
 
   
-##Wprowadzanie danych na stronie Preferences
+#### Wprowadzanie danych na stronie Preferences
+<br>
 >Select Date: po kliknięciu na ten box pokazuje się kalendarz z nieaktywnym bieżącym miesiącem.
 >Należy kliknąć na strzałkę w górnym, prawym rogu, żeby przejsć do kolejnego miesiąca.
 >Aktywne są tylko kolejne miesiące, ponieważ aplikacja służy do wpisywania preferencji użytkownika 
