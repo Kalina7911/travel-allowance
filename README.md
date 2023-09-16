@@ -6,12 +6,17 @@
 
 #### Opis:
 
-Projek służy do obliczania wysokości dodatku do popołudniowej zmiany zwanego Travel Allowance.
+Projek służy do obliczania wysokości dodatku do popołudniowej zmiany zwanego Travel Allowance. 
+
+Jest przeznaczona dla pracowników międzynarodowej firmy, gdzie obowiązuje komunikacja w języku 
+
+angielskim, dlatego wszystkie instrukcje w aplikacji są wyłącznie w tym języku. 
 
 
 Aplikacja składa się z 3 widoków: Travel Allowance, Preferences i Rate of Allowance.
 
 Widok Travel Allowance wyświetla informacje nt. dodatku zwanego Travel Allowance. 
+
 
 Widok Preferences służy do wprowadzania przez użytkowniaka 2 informacji/preferencji:
 
@@ -28,14 +33,8 @@ Widok  Rate of Allowance wyświetla 2 informacje :
 
 2.wysokość dodatku do popołudniowych zmian/Travel Allowance w danym miesiącu
 
-
-1.Strona głowna: Travel Allowance
->Wyświetla informacje na temat dodatku zwanego travel allowance.
->Aplikacja jest wyłącznie w języku angielskim ze wzgędu na użytkowników, którzy są pracownikami międzynarodowej firmy,
->gdzie komunikacja odbywa się tylko po angielsku.
->Podane są też linki do stron Preferences i Rate of Allowance.
   
-2.Strona: Preferences
+Wprowadzanie danych na stronie Preferences
 >Select Date: po kliknięciu na ten box pokazuje się kalendarz z nieaktywnym bieżącym miesiącem.
 >Należy kliknąć na strzałkę w górnym, prawym rogu, żeby przejsć do kolejnego miesiąca.
 >Aktywne są tylko kolejne miesiące, ponieważ aplikacja służy do wpisywania preferencji użytkownika 
