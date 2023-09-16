@@ -15,7 +15,7 @@ angielskim, dlatego wszystkie instrukcje w aplikacji są wyłącznie w tym języ
 <br>
 <br>
 
-Aplikacja składa się z 3 widoków: Travel Allowance, Preferences i Rate of Allowance.
+Aplikacja składa się z 3 widoków: **Travel Allowance**, **Preferences** i **Rate of Allowance**.
 <br>
 <br>
 Widok **Travel Allowance** wyświetla informacje nt. dodatku zwanego Travel Allowance. 
@@ -32,8 +32,9 @@ zmianę czyli Travel Allowance.
 Widok  **Rate of Allowance** wyświetla 2 informacje :
 
 
-1. liczba dni na popołudniową zmianę/ PM danego miesiąca 
-2. wysokość dodatku do popołudniowych zmian/Travel Allowance w danym miesiącu
+1.  wysokość dodatku do popołudniowych zmian/Travel Allowance w danym miesiącu
+2.  liczba dni na popołudniową zmianę/ PM danego miesiąca 
+
 
   
 #### Wprowadzanie danych na stronie Preferences
