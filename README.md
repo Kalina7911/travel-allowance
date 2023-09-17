@@ -5,7 +5,7 @@
 ### Nazwa projektu: Travel Allowance
 <br>
 
-### Opis
+### *Opis*
 <br>
 
 Projek służy do obliczania wysokości dodatku do popołudniowej zmiany zwanego Travel Allowance. 
@@ -34,15 +34,14 @@ Aplikacja składa się z 3 widoków: **Travel Allowance**, **Preferences** i **R
       2.  liczba dni na popołudniową zmianę/ PM danego miesiąca
    <br>
    <br>
-
   
-### Wprowadzanie danych na stronie Preferences
+### *Wprowadzanie danych na stronie Preferences*
 <br>
 
 Na stronie Preferences znajdują się 3 pola do wprowadzania danych: **Select Date**, **Select Shift**, **Enter Your Index**.
 <br>
 <br>
-1.  Po kliknięciu na to pole **Select Date** pokazuje się kalendarz z nieaktywnym bieżącym miesiącem.
+1.  Po kliknięciu na pole **Select Date** pokazuje się kalendarz z nieaktywnym bieżącym miesiącem.
 
     Należy kliknąć na strzałkę w górnym, prawym rogu, żeby przejsć do kolejnego miesiąca.
  
@@ -51,7 +50,7 @@ Na stronie Preferences znajdują się 3 pola do wprowadzania danych: **Select Da
       *(to znaczy wybranych dni pracy i zmnian: poranna AM lub popołudniowa PM) tylko na kolejny miesiąc* 
 
 
-2.   Użytkownik zaznacza 1 dzień , w którym chce pracować w danym miesiącu.
+2.   Użytkownik zaznacza 1 dzień , w którym chce pracować w następnym miesiącu.
 
      *Praca odbywa się w systemie 24/7, więc każdy dzień może być wybrany łącznie z sobotami i niedzielami.*
 
@@ -70,49 +69,76 @@ Na stronie Preferences znajdują się 3 pola do wprowadzania danych: **Select Da
        *Wybrany index (111, 112 lub 113) należy wpisać w polu **Enter Your Index**.*
    
     
-6.  Następny krok to zachowanie wybranych danych poprzez naciśnięcie przycisku SAVE
+5.  Następny krok to zachowanie wybranych danych poprzez naciśnięcie przycisku **SAVE**
    <br>
-   
 
+   **Użytkownik powtarza kroki od 1 do 5 tyle razy, ile jest dni pracujących w danym miesiącu.**
+
+   **Aplikacja informuje, ile dni pozostało do wprowadzenia w danym miesiącu, wyświetlając komunikat:**
+   
+   **Missing working days..** 
+   
+<br>
    Jeżeli pola Sekect Date, Select Shift , Enter Your Index zostały poprawnie zaznaczone, aplikacja wyświetla 2 informacje:
 
-  1.    wybór został zapisany: Preference Added
-  2.    ile jeszcze dni należy wybrać, np. Missing working days 20.
+  1.    wybór został zapisany: **Preference Added**
+  2.    ile jeszcze dni należy wybrać, np. **Missing working days 20**, co oznacza ,że użytkownik musi jeszcze wybrać/dodać 20 dni.
 
-        *Każdy miesiąc ma inną liczbę dni pracujących (working days). Liczba dni pracujących jest ustawiona w tabeli "months".*
+
+        *Każdy miesiąc ma inną liczbę dni pracujących (working days). Liczba dni pracujących dla każdego miesiąca jest ustawiona**
+
+         *w tabeli "months".*
+
+Pozostałe komunikaty dla użytkowanika wyświetlane na stronie Preferences: 
+
+1.  **You have marked all the required working days** : informuje użytkownika , że wymagana liczba dni pracujących na następny miesiąc
+
+     została zaznaczona i zachowana w bazie danych.
+
+2.  **Too many working days. Your last choices will not be recoreded**: ta informacja pojawia się, jeżeli użytkownik zaznaczy za dużo
+
+      dni pracujących na następny miesiąc.
     <br>
     <br>
+    <br>
+    
+### *Wyświetlanie danych na stronie Rate of Allowance*
+<br>
 
-**Użytkownik powtarza kroki od 1 do 5 tyle razy, ile jest dni pracujących w danym miesiącu.**
-       
+Strona Rate of Allowance służy do wyświetlania 2 informacji: 
+
+1.  wysokość dodatku zwanego Travel Allowance dla danego użytkownika,
+2.  ilość popołudniowych zmian przepracowanych przez pracownika w wybranym miesiącu.
+<br>
+
+Na stronie Rate of Allowance znajdują się 2 pola: **Enter Your Index**, **Select Month**. 
+
+1. W polu **Enter Your Index** użytkownik wpisuje swój Index (numer), pod którym widnieje w bazie danych.
+
+   *Informacje odnośnie tego ,co to jest Index, do czego służy i o dostępnych aktualnie indeksach do testowania*
+
+   *w bazie danych znajdują się w punkcie 4 w częsci: Wprowadzanie danych na stronie Preferences.*
    
+3.  Następnie w polu **Select Month** użytkownik wybiera miesiąc.
+
+4.  Następnie użytkownika klika w przycisk **Calculate**.
+
+Po wykonaniu powyższych kroków, aplikacja wyświeltla 2 informacje: 
+
+1.  informację, ile użytkownik otwrzyma PLN w ramach dodatku za pracę na popołudniowe zmiany w wybranym miesiącu
+
+     (Travel Allowance). Informacja wyświetlana jest w wierszu: **Your Travel Allowance**. 
+
+2.  informację o ilości zmian popołudniowych w wybranym miesiącu. Ta informacja jest wyświetlana w wierszu:
+
+     **Number of PM Shifts**. 
    
->Użytkownik każdego miesiąca może zaznaczyć tylko określoną liczbę dni. Informacja, ile dni jest wymaganych
-> w danym miesiącu zajduje sie w tabeli Months w bazie danych.
->Zaznaczanie preferencji:
->1. po wyswietleniu kalendarza z następnym miesiącem,użytkownik zaznacza wybrany dzień
->2. następnie w Select Shift wybiera zmianę ranną, czyli AM lub popołudniową PM
->3. następnie w Enter Your Index wpisuje numer, pod którym widnieje w bazie danych.
->   Każdy użytkownik posiada unikatowy numer w bazie danych, zwany indeksem/Index.
->   Wymagane jest , żeby użytkownik znał swój numer/Index w bazie danych.
->   Obecnie w bazie danych jest 3 użytkowników z numerami/Indexami 111, 112, 113.
->   Oznacza to , że po wybraniu dnia i zmiany, należy wprowadzić jeden z 3 powyższych numerów/ Index,
->   aby zapisać Preferencje w bazie danych.
->
->   
->   
->5. 
->Aplikacja informuje użytkownika, czy wprowadził właściwą liczbę dni. 
->Użytkownik jest identyfikowany za pomocą indeksu. Obecnie dostępne indeksy w bazie danych to 111, 112, 113.
->Po wprowadzeniu indeksu, użytkownik zapisuje swoje preferencje do bazy danych. 
-  
-3.Strona: Rate of Allowance 
->Użytkownik wpisuje swój index i wybiera miesiąc.
->Po przyciśnięciu: Calculate, aplikacja wyświetla informacje o wysokości dodatku travel allowance za wybrany miesiąc.
->Użytkownik otrzymuje również informację o ilości zmian PM/popołudniowych w danym miesiącu, które są podstawą do wyliczania travel allowance. 
+ 
+<br>
 
+### *Zainicjalizowane dane wyjściowe*
+<br>
 
-Zainicjalizowane dane wyjściowe
 1. uzupełniona tabela Months: 12 miesięcy + liczba dni pracujących dla każdego miesiąca
 
 
@@ -125,7 +151,7 @@ Zainicjalizowane dane wyjściowe
 
 
 
-#### Stos technologiczny:
+### *Stos technologiczny*:
 - Java
 - Maven
 - Spring Boot(Web,JPA)
@@ -137,7 +163,7 @@ Zainicjalizowane dane wyjściowe
 - Pikaday.js
 - Moment.js
 
-## Uruchownienie 
+### *Uruchomienie*
 Proszę przejść na link https://travel-allowance.up.railway.app/
 
 
